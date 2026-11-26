@@ -7,13 +7,13 @@
 <meta name="description" content="Black Friday EMD Média : le site Croissance à 2 500 $ au lieu de 5 000 $. Réservation, rendez-vous ou soumission en ligne, trouvable sur Google, Bing et l’IA. 5 places, jusqu’au 1er décembre.">
 <meta name="theme-color" content="#030603">
 <meta name="robots" content="noindex">
-<!-- v19 -->
+<!-- v20 -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:title" content="Black Friday EMD : ton site web pro à -50 %">
 <meta property="og:description" content="2 500 $ au lieu de 5 000 $. 5 places seulement, jusqu’au 1er décembre.">
 <meta property="og:url" content="https://emdteamdev.github.io/black-friday-2026/">
-<meta property="og:image" content="https://emdteamdev.github.io/black-friday-2026/assets/og-2500.jpg">
+<meta property="og:image" content="https://emdteamdev.github.io/black-friday-2026/assets/og-form.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -107,7 +107,7 @@ body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opa
 @media (max-width:560px){.mini-cd{display:none}.nav .wrap{height:64px}.nav .logo img{height:22px}}
 
 /* ===== Hero ===== */
-.js:not(.ready) .hero .wrap>div:first-child{opacity:0}
+.js:not(.ready) .hero .wrap{opacity:0}
 .hero{position:relative;min-height:100svh;padding:128px 0 56px;overflow:hidden;display:flex;align-items:center}
 .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
 .hero-bg .glow{position:absolute;left:50%;top:62%;width:1500px;height:1100px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(60,214,96,.42),rgba(11,58,26,.4) 45%,transparent 72%)}
@@ -151,7 +151,7 @@ body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opa
 .cd .lbl{display:flex;flex-direction:column;justify-content:center;padding-left:8px;font-size:14px;color:var(--mu);line-height:1.35}
 .cd .lbl b{color:var(--g);font-weight:650}
 /* device */
-.device-wrap{perspective:1600px;position:relative;justify-self:end;width:min(100%,520px,calc((100svh - 200px) * .8))}
+.device-wrap{perspective:1600px;position:relative}
 .device{position:relative;border-radius:30px;padding:10px;background:linear-gradient(150deg,rgba(255,255,255,.18),rgba(255,255,255,.03) 40%,rgba(60,214,96,.25));box-shadow:0 60px 120px -30px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08),0 0 90px -20px rgba(60,214,96,.45);transform:rotateY(-14deg) rotateX(6deg);transform-style:preserve-3d;will-change:transform}
 .device video{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;background:#000}
 .device::after{content:"";position:absolute;inset:10px;border-radius:22px;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.13),transparent 30%)}
@@ -174,7 +174,6 @@ body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opa
 @media (max-width:980px){
   .hero{padding-top:128px}
   .hero .wrap{grid-template-columns:1fr}
-  .device-wrap{max-width:460px;width:100%;margin:10px auto 0}
   .device{transform:rotateX(8deg)}
   .dev-badge{left:-8px}
 }
@@ -187,6 +186,23 @@ body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opa
   .snd{right:16px;bottom:16px}
 }
 
+/* Formulaire du héros */
+.hform{justify-self:end;width:100%;max-width:470px;padding:26px 26px 22px;border-radius:26px;background:linear-gradient(170deg,rgba(9,22,13,.96),rgba(4,10,6,.96));border:1px solid rgba(60,214,96,.38);box-shadow:0 50px 110px -30px rgba(0,0,0,.95),0 0 90px -30px rgba(60,214,96,.55)}
+.hform .hf-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.hform .hf-head b{font:400 26px/1 var(--anton);text-transform:uppercase;color:var(--g)}
+.hform .fld{margin-bottom:12px}
+.hform .fld input{height:50px}
+.hform .btn{margin-top:8px}
+.hero-cta{display:none}
+@media (min-width:981px) and (max-height:800px){.hform{padding:18px 22px 16px}.hform .hf-head{margin-bottom:10px}.hform .fld{margin-bottom:8px;gap:5px}.hform .fld input{height:44px}.hform .consent-note{margin-top:10px;font-size:12px}}
+@media (max-width:980px){.hero .wrap{gap:0}.hero .wrap>div:first-child{display:contents}.hform{justify-self:stretch;max-width:none;margin-top:26px;order:2}.hero .cd{order:3;margin-top:22px}}
+@media (max-width:560px){.hero{padding-top:112px}.hero h1{margin-top:14px}.hero h1 .big{font-size:clamp(72px,22.5vw,118px)!important}.hero .sub{margin-top:14px;font-size:18px}.priceline{margin-top:16px}.hform{margin-top:20px;padding:20px 18px 18px}.hform .hf-head{margin-bottom:12px}.hform .two{grid-template-columns:1fr 1fr;gap:10px}}
+/* Section vidéo */
+.vidband{position:relative;padding:clamp(70px,9vw,130px) 0;overflow:hidden}
+.vidband::before{content:"";position:absolute;left:8%;top:50%;width:900px;height:700px;transform:translateY(-50%);background:radial-gradient(closest-side,rgba(60,214,96,.22),transparent)}
+.vidband .wrap{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,100px);align-items:center}
+.vidband .device-wrap{justify-self:center;width:min(100%,440px)}
+@media (max-width:900px){.vidband .wrap{grid-template-columns:1fr}.vidband .device-wrap{width:min(100%,400px)}.vidband .cta-row .btn{width:100%}}
 /* ===== Logos confiance ===== */
 .trust{position:relative;padding:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(60,214,96,.035),transparent)}
 .trust .wrap{display:flex;align-items:center;gap:clamp(24px,5vw,80px)}
@@ -448,7 +464,8 @@ body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opa
 .form-sec .h2{font-size:clamp(40px,5vw,76px)}
 .form-sec .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,80px);align-items:start}
 .form{padding:clamp(24px,3vw,40px);border-radius:var(--r);background:rgba(255,255,255,.03);border:1px solid var(--line)}
-.fld{display:grid;gap:8px;margin-bottom:16px}
+.fld{display:grid;gap:8px;margin-bottom:16px;min-width:0}
+.fld input{width:100%;min-width:0}
 .fld label,.fld .lb{font-size:13px;font-weight:650;letter-spacing:.04em;color:var(--mu)}
 .fld input{height:54px;padding:0 18px;border-radius:14px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.14);color:var(--tx);font:500 16px var(--sans);transition:border-color .25s,box-shadow .25s,background .25s}
 .fld input::placeholder{color:rgba(255,255,255,.3)}
@@ -564,10 +581,7 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
         <span class="now">2 500 $</span><span class="was">5 000 $</span><span class="tag">-50 %</span>
         <span class="cap">EMD Croissance · site sur mesure avec réservation, rendez-vous ou soumission en ligne</span>
       </div>
-      <div class="cta-row">
-        <a class="btn btn-p" href="#reserver">Réserver ma place<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        <a class="btn btn-s" href="#realisations">Voir nos sites en action<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
-      </div>
+      <div class="cta-row hero-cta"><a class="btn btn-p" href="#hform">Réserver ma place<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
       <div class="cd" id="cd" role="timer" aria-label="Temps restant avant la fin de l’offre">
         <div class="u"><b data-k="d">00</b><small>jours</small></div>
         <div class="u"><b data-k="h">00</b><small>heures</small></div>
@@ -576,6 +590,27 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
         <div class="lbl"><span><b>5 places</b> seulement</span><span>Fin le 1er décembre, minuit</span></div>
       </div>
     </div>
+    <form class="form hform" id="hform" novalidate aria-label="Réserver ma place">
+      <div class="fs">
+        <div class="hf-head"><span class="eye">Réserve ta place</span><b>Gab te rappelle.</b></div>
+        <div class="fld"><label for="h-nom">Prénom et nom</label><input id="h-nom" name="nom" autocomplete="name" required placeholder="Ton nom"></div>
+        <div class="fld"><label for="h-ent">Entreprise</label><input id="h-ent" name="entreprise" autocomplete="organization" required placeholder="Nom de ton entreprise"></div>
+        <div class="two">
+          <div class="fld"><label for="h-tel">Téléphone</label><input id="h-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="418 000-0000"></div>
+          <div class="fld"><label for="h-mail">Courriel</label><input id="h-mail" name="courriel" type="email" autocomplete="email" required placeholder="toi@entreprise.ca"></div>
+        </div>
+        <button class="btn btn-p" type="submit">Réserver ma place à 2 500 $<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <p class="consent-note">En envoyant ce formulaire, tu acceptes qu’EMD Média utilise ces renseignements pour te contacter au sujet de cette offre. <a href="politique-confidentialite.html">Politique de confidentialité</a></p>
+        <p class="err" role="alert"></p>
+      </div>
+      <div class="done" role="status"><h3>Presque fini.</h3><p>Ton application de courriel s’est ouverte avec ta demande prête. <b>Clique sur Envoyer</b> et Gab te rappelle.</p></div>
+    </form>
+  </div>
+</section>
+
+<!-- VIDÉO -->
+<section class="vidband" aria-label="La pub en vidéo">
+  <div class="wrap">
     <div class="device-wrap">
       <div class="device" id="device">
         <video id="heroVid" src="assets/bf-4x5.mp4" poster="assets/bf-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Vidéo Black Friday EMD : visite du site de la Base Plein Air de la Chaudière"></video>
@@ -583,6 +618,12 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
         <div class="dev-badge"><b>« C’est wow. »</b>Réjean, Base Plein Air</div>
         <div class="reflect" aria-hidden="true"></div>
       </div>
+    </div>
+    <div class="rv">
+      <span class="eye">La pub · 53 secondes</span>
+      <h2 class="h2" style="margin-top:18px">Regarde<br><span class="g">ce que ça donne.</span></h2>
+      <p class="lead" style="margin-top:22px">Réjean, propriétaire de la Base Plein Air de la Chaudière, te montre son site : <b>le client réserve en ligne, la demande arrive toute seule.</b></p>
+      <div class="cta-row"><a class="btn btn-p" href="#hform">Réserver ma place<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="btn btn-s" href="#realisations">Voir nos sites en action<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a></div>
     </div>
   </div>
 </section>
@@ -955,12 +996,12 @@ function sound(btn,vid,labOn,labOff){
 }
 const heroVid=$('#heroVid'),qVid=$('#qVid');
 sound($('#heroSnd'),heroVid,'Couper le son','Activer le son');
-setTimeout(()=>{if(heroVid.paused&&heroVid.muted&&heroVid.currentTime<.1){const sp=$('#heroSnd span');sp.textContent='Lire la vidéo';heroVid.addEventListener('playing',()=>{if(heroVid.muted)sp.textContent='Activer le son'},{once:true})}},2500);
+const blocked=()=>{if(heroVid.paused&&heroVid.muted){const sp=$('#heroSnd span');sp.textContent='Lire la vidéo';heroVid.addEventListener('playing',()=>{if(heroVid.muted)sp.textContent='Activer le son'},{once:true})}};
 heroVid.addEventListener('click',()=>{if(heroVid.paused)heroVid.play().catch(()=>{})});
 sound($('#qSnd'),qVid,'Couper le son','Écouter Réjean');
 
 /* Vidéos : jouer seulement à l’écran */
-const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(v.preload==='none')v.preload='auto';if(!v.closest('.scr')||v.classList.contains('on'))v.play().catch(()=>{})}else v.pause()}),{threshold:.25});
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(v.preload==='none')v.preload='auto';if(!v.closest('.scr')||v.classList.contains('on'))v.play().catch(()=>{if(v===heroVid)setTimeout(()=>{if(heroVid.paused){heroVid.play().catch(blocked)}},700)})}else v.pause()}),{threshold:.25});
 [heroVid,qVid,$('#bScr video')].forEach(v=>vio.observe(v));
 const visIO=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('vis',e.isIntersecting)));$$('.hero,.xr').forEach(e=>visIO.observe(e));
 
@@ -1012,19 +1053,20 @@ xr.addEventListener('click',e=>{if(e.target===xr||e.target.tagName==='IMG'||e.ta
 xh.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){setX(xv-5);e.preventDefault()}if(e.key==='ArrowRight'){setX(xv+5);e.preventDefault()}});
 
 /* Formulaire : demande préparée dans le courriel (aucun envoi serveur) */
-$$('#chips .chip').forEach(c=>c.addEventListener('click',()=>c.setAttribute('aria-pressed',String(c.getAttribute('aria-pressed')!=='true'))));
-$('#form').addEventListener('submit',e=>{e.preventDefault();const f=e.target,err=$('#fErr');err.style.display='none';
-  const v=n=>f.elements[n].value.trim();
-  const miss=[];if(!v('nom'))miss.push('ton nom');if(!v('entreprise'))miss.push('ton entreprise');
-  if(v('telephone').replace(/\D/g,'').length<10)miss.push('un téléphone valide');
-  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('courriel')))miss.push('un courriel valide');
-  if(miss.length){err.textContent='Il manque : '+miss.join(', ')+'.';err.style.display='block';return}
-  const need=$$('#chips .chip[aria-pressed="true"]').map(c=>c.textContent).join(', ')||'Non précisé';
-  const body=`Bonjour EMD,\n\nJe veux réserver ma place pour l’offre Black Friday (EMD Croissance à 2 500 $).\n\nNom : ${v('nom')}\nEntreprise : ${v('entreprise')}\nTéléphone : ${v('telephone')}\nCourriel : ${v('courriel')}\nMon site doit surtout : ${need}\n\nMerci!`;
-  const btn=$('#fBtn');btn.disabled=true;
-  location.href='mailto:agence@emdmedia.ca?subject='+encodeURIComponent('Black Friday — Réserver ma place — '+v('entreprise'))+'&body='+encodeURIComponent(body);
-  setTimeout(()=>{f.classList.add('sent');btn.disabled=false},600);
-});
+$$('form.form').forEach(f=>{const err=f.querySelector('.err'),btn=f.querySelector('button[type=submit]'),chips=[...f.querySelectorAll('.chip')];
+  chips.forEach(c=>c.addEventListener('click',()=>c.setAttribute('aria-pressed',String(c.getAttribute('aria-pressed')!=='true'))));
+  f.addEventListener('submit',e=>{e.preventDefault();err.style.display='none';
+    const v=n=>f.elements[n].value.trim();
+    const miss=[];if(!v('nom'))miss.push('ton nom');if(!v('entreprise'))miss.push('ton entreprise');
+    if(v('telephone').replace(/\D/g,'').length<10)miss.push('un téléphone valide');
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('courriel')))miss.push('un courriel valide');
+    if(miss.length){err.textContent='Il manque : '+miss.join(', ')+'.';err.style.display='block';return}
+    const need=chips.filter(c=>c.getAttribute('aria-pressed')==='true').map(c=>c.textContent).join(', ');
+    const body=`Bonjour EMD,\n\nJe veux réserver ma place pour l’offre Black Friday (EMD Croissance à 2 500 $).\n\nNom : ${v('nom')}\nEntreprise : ${v('entreprise')}\nTéléphone : ${v('telephone')}\nCourriel : ${v('courriel')}${need?'\nMon site doit surtout : '+need:''}\n\nMerci!`;
+    btn.disabled=true;
+    location.href='mailto:agence@emdmedia.ca?subject='+encodeURIComponent('Black Friday — Réserver ma place — '+v('entreprise'))+'&body='+encodeURIComponent(body);
+    setTimeout(()=>{f.classList.add('sent');btn.disabled=false},600);
+  })});
 
 /* ===== Animations ===== */
 if(RM||!window.gsap){document.documentElement.classList.add('ready');$$('.rv').forEach(e=>{e.style.opacity=1;e.style.transform='none'});$('#volNum').textContent='-50 %';$('#rollPrice').textContent='2 500 $';initLessardStatic();initBase();return}
@@ -1062,17 +1104,17 @@ tl.call(()=>{$$('.fr .b').forEach(e=>e.remove());$$('.w1 .b').forEach(e=>e.remov
   const W=frW.offsetWidth;$$('.fr .l').forEach(l=>{const e=l.querySelector('.s');e.style.backgroundImage='linear-gradient(105deg,#3CD660 calc(var(--p) - 13%),#e6ffec var(--p),#3CD660 calc(var(--p) + 13%))';e.style.backgroundSize=W+'px 100%';e.style.backgroundPosition=(-l.offsetLeft)+'px 0'});frW.classList.add('sh')},null,1.56)
   .fromTo(frW,{'--p':'-20%'},{'--p':'120%',duration:.6,ease:'power2.inOut',onComplete(){frW.classList.remove('sh');$$('.fr .s').forEach(e=>{e.style.backgroundImage=e.style.backgroundSize=e.style.backgroundPosition=''})}},1.57);
 tl.from('.hero .sub,.priceline,.cta-row,.cd',{y:30,opacity:0,stagger:.08,duration:1},1.35)
-  .fromTo('.device',{y:80,opacity:.01,rotateY:MOBH?0:-40,rotateX:MOBH?8:6},{y:0,opacity:1,rotateY:MOBH?0:-14,rotateX:MOBH?8:6,duration:1.6},.5);
+  .from('.hform',{y:70,opacity:0,duration:1.3},.75);
+gsap.set('.device',{rotateY:MOBH?0:-14,rotateX:MOBH?8:6});
 document.documentElement.classList.add('ready');
-const tryPlay=()=>{if(heroVid.paused&&heroVid.currentTime<.1&&heroVid.getBoundingClientRect().bottom>0)heroVid.play().catch(()=>{})};tryPlay();tl.call(tryPlay,null,.7);tl.eventCallback('onComplete',tryPlay);
-let tries=0;const iv=setInterval(()=>{if(!heroVid.paused||++tries>10)return clearInterval(iv);tryPlay()},800);
+const tryPlay=()=>{const r=heroVid.getBoundingClientRect();if(heroVid.paused&&r.bottom>0&&r.top<innerHeight)heroVid.play().catch(()=>{})};
 ['pointerdown','touchstart','keydown'].forEach(ev=>addEventListener(ev,tryPlay,{once:true,passive:true}));
 }
 Promise.race([document.fonts?document.fonts.ready:Promise.resolve(),new Promise(r=>setTimeout(r,900))]).then(startHero);
-gsap.to('.device-wrap',{y:-60,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+gsap.fromTo('.device',{y:50},{y:-50,ease:'none',scrollTrigger:{trigger:'.vidband',start:'top bottom',end:'bottom top',scrub:true}});
 if(matchMedia('(hover:hover)').matches){const dv=$('#device');let over=false;
   dv.addEventListener('pointerenter',()=>{over=true;gsap.killTweensOf(dv,'rotateX,rotateY')});dv.addEventListener('pointerleave',()=>{over=false});
-  $('.hero').addEventListener('pointermove',e=>{if(over||!document.documentElement.classList.contains('ready'))return;const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;gsap.to(dv,{rotateY:-14+x*12,rotateX:6-y*9,duration:1.4,ease:'power3.out',overwrite:'auto'})})}
+  $('.vidband').addEventListener('pointermove',e=>{if(over)return;const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;gsap.to(dv,{rotateY:-14+x*12,rotateX:6-y*9,duration:1.4,ease:'power3.out',overwrite:'auto'})})}
 
 /* Révélations */
 $$('.rv').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 85%'}}));
