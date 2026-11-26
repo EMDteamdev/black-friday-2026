@@ -7,7 +7,7 @@
 <meta name="description" content="Black Friday EMD Média : le site Croissance à 2 000 $ au lieu de 4 000 $. Réservation, rendez-vous ou soumission en ligne, trouvable sur Google, Bing et l’IA. 5 places, jusqu’au 30 novembre.">
 <meta name="theme-color" content="#030603">
 <meta name="robots" content="noindex">
-<!-- v9 -->
+<!-- v10 -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:title" content="Black Friday EMD : ton site web pro à -50 %">
@@ -243,8 +243,8 @@ body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opa
 .lessard .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center;overflow:hidden}
 .lessard .stage{position:relative;width:min(1120px,92vw);margin:0 auto;perspective:1800px}
 .lessard .browser{transform-origin:50% 60%;will-change:transform}
-.lessard canvas{width:100%;height:100%;object-fit:cover;background:#0b0f0c url(assets/lessard/01.webp) center/cover no-repeat}
-.lessard .page{position:absolute;inset:0;opacity:0}
+.lessard canvas{position:relative;z-index:2;will-change:transform;box-shadow:0 30px 60px rgba(0,0,0,.7);width:100%;height:100%;object-fit:cover;background:#0b0f0c url(assets/lessard/01.webp) center/cover no-repeat}
+.lessard .page{position:absolute;inset:0;z-index:1;overflow:hidden}
 .lessard .page img{width:100%;will-change:transform}
 .lessard .caps{position:absolute;inset:0;pointer-events:none}
 .cap{position:absolute;max-width:310px;padding:16px 18px;border-radius:16px;background:rgba(3,6,3,.92);border:1px solid rgba(60,214,96,.35);box-shadow:0 20px 50px -20px rgba(0,0,0,.9);opacity:0;transform:translateY(20px)}
@@ -629,7 +629,7 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
         <div class="caps">
           <div class="cap c1"><span class="k">01 · L’effet wow</span><p>L’accueil s’anime <b>au défilement</b>. On reste, on regarde, on retient le nom.</p></div>
           <div class="cap c2"><span class="k">02 · Trouvable</span><p>Chaque tracteur a <b>sa propre page lisible par Google</b>, pas juste une image.</p></div>
-          <div class="cap c3"><span class="k">03 · Simple</span><p>Choisir sa marque, trouver son tracteur, <b>appeler en un clic</b>.</p></div>
+          <div class="cap c3"><span class="k">03 · La page se lève</span><p>La pelle remplit l’écran, puis <b>soulève l’image pour dévoiler le catalogue</b>. Choisir sa marque, appeler en un clic.</p></div>
         </div>
       </div>
       <div class="prog" aria-hidden="true"><i id="lProg"></i></div>
@@ -1079,7 +1079,7 @@ ScrollTrigger.create({trigger:'.half',start:'top 70%',once:true,onEnter(){
 gsap.fromTo(['#volNum','#ext'],{rotateY:-38,rotateX:14},{rotateY:22,rotateX:-6,ease:'none',scrollTrigger:{trigger:'.half',start:'top bottom',end:'bottom top',scrub:true}});
 
 /* Lessard : séquence image par image au défilement */
-const cv=$('#lCanvas'),cx=cv.getContext('2d'),N=63,imgs=[];let last=-1;
+const cv=$('#lCanvas'),cx=cv.getContext('2d'),N=70,imgs=[];let last=-1;
 if(innerWidth<=900){cv.width=800;cv.height=1000}
 function draw(i){i=Math.max(0,Math.min(N-1,Math.round(i)));while(i>0&&!imgs[i])i--;const im=imgs[i];if(!im)return;if(i===last)return;
   const iw=im.naturalWidth||im.width,ih=im.naturalHeight||im.height;if(!iw)return;last=i;
@@ -1097,12 +1097,13 @@ function loadSeq(){if(loaded)return;loaded=true;const small=innerWidth<=900;let 
 ScrollTrigger.create({trigger:'#lessard',start:'top 250%',once:true,onEnter:loadSeq});
 const ltl=gsap.timeline({scrollTrigger:{trigger:'#lessard',start:'top top',end:'bottom bottom',scrub:.6,onUpdate:s=>gsap.set('#lProg',{scaleX:s.progress})}});
 ltl.fromTo('#lBrowser',{rotateX:28,scale:.82,y:60},{rotateX:0,scale:1,y:0,duration:.18,ease:'power2.out'},0)
-   .to(seq,{f:N-1,duration:.5,ease:'none',onUpdate:()=>draw(seq.f)},0)
+   .to(seq,{f:N-1,duration:.6,ease:'none',onUpdate:()=>draw(seq.f)},0)
    .to('.cap.c1',{opacity:1,y:0,duration:.06},.08).to('.cap.c1',{opacity:0,y:-20,duration:.06},.3)
-   .to('.cap.c2',{opacity:1,y:0,duration:.06},.32).to('.cap.c2',{opacity:0,y:-20,duration:.06},.56)
-   .to('#lPage',{opacity:1,duration:.08},.5)
-   .fromTo('#lPage img',{yPercent:0},{yPercent:-52,duration:.42,ease:'none'},.56)
-   .to('.cap.c3',{opacity:1,y:0,duration:.06},.62).to('.cap.c3',{opacity:0,y:-20,duration:.06},.94);
+   .to('.cap.c2',{opacity:1,y:0,duration:.06},.34).to('.cap.c2',{opacity:0,y:-20,duration:.06},.56)
+   /* comme sur le vrai site : la pelle remplit l'écran, puis l'image se soulève et dévoile le catalogue */
+   .fromTo('#lCanvas',{yPercent:0},{yPercent:-103,duration:.26,ease:'power2.inOut'},.62)
+   .fromTo('#lPage img',{scale:1.07},{scale:1,duration:.3,ease:'power2.out',transformOrigin:'50% 0%'},.62)
+   .to('.cap.c3',{opacity:1,y:0,duration:.06},.74).to('.cap.c3',{opacity:0,y:-20,duration:.05},.95);
 function initLessardStatic(){$('#lPage').style.opacity=1;$$('.cap').forEach(c=>{c.style.opacity=1;c.style.transform='none'})}
 
 /* Base : parcours */
