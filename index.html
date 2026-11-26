@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Black Friday : ton site web pro à 2 000 $ (-50 %) | EMD Média</title>
+<meta name="description" content="Black Friday EMD Média : le site Croissance à 2 000 $ au lieu de 4 000 $. Réservation, rendez-vous ou soumission en ligne, trouvable sur Google, Bing et l’IA. 5 places, jusqu’au 30 novembre.">
+<meta name="theme-color" content="#030603">
+<meta name="robots" content="noindex">
+<!-- v9 -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:title" content="Black Friday EMD : ton site web pro à -50 %">
+<meta property="og:description" content="2 000 $ au lieu de 4 000 $. 5 places seulement, jusqu’au 30 novembre.">
+<meta property="og:url" content="https://emdteamdev.github.io/black-friday-2026/">
+<meta property="og:image" content="https://emdteamdev.github.io/black-friday-2026/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/anton-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolage-latin.woff2" crossorigin>
+<script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('ready')},3000)</script>
+<link rel="preload" as="image" href="assets/bf-poster.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"EMD Média","url":"https://emdmedia.ca","telephone":"+1-418-955-7164","email":"agence@emdmedia.ca","logo":"assets/emd-logo.svg"},
+{"@type":"Offer","name":"EMD Croissance — Black Friday","description":"Site web sur mesure avec réservation, rendez-vous ou soumission en ligne.","price":"2000","priceCurrency":"CAD","validThrough":"2026-11-30T23:59:59-05:00","availability":"https://schema.org/LimitedAvailability","seller":{"@type":"Organization","name":"EMD Média"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Qu’est-ce qui arrive après le 30 novembre?","acceptedAnswer":{"@type":"Answer","text":"L’offre se termine. Le site Croissance revient à son prix régulier de 4 000 $."}},
+{"@type":"Question","name":"Combien de temps pour avoir mon site?","acceptedAnswer":{"@type":"Answer","text":"Ton site est en ligne en 7 à 14 jours."}},
+{"@type":"Question","name":"Pourquoi seulement 5 places?","acceptedAnswer":{"@type":"Answer","text":"Chaque site est fait sur mesure. On limite le nombre de places pour livrer chacun au même niveau."}}]}
+]}
+</script>
+<style>
+@font-face{font-family:'Anton';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/anton-latin.woff2) format('woff2')}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:400 800;font-stretch:100%;font-display:swap;src:url(assets/fonts/bricolage-latin.woff2) format('woff2')}
+:root{
+  --g:#3CD660;--g2:#5fe27b;--gd:#0b3a1a;--gx:#021a0a;--bg:#030603;--ink:#06100a;--line:rgba(255,255,255,.09);
+  --tx:#f2f7f3;--mu:rgba(242,247,243,.62);--mu2:rgba(242,247,243,.42);
+  --anton:"Anton",Impact,sans-serif;--sans:"Bricolage Grotesque",system-ui,sans-serif;--mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  --pad:clamp(20px,5vw,72px);--max:1320px;--r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);color:var(--tx);-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{font-family:var(--sans);font-size:17px;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video,canvas{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--g);color:var(--ink)}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.g{color:var(--g)}
+.eye{font:600 12px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--mu);display:inline-flex;align-items:center;gap:12px}
+.eye::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 14px var(--g)}
+.h2{font:400 clamp(44px,7.2vw,112px)/.92 var(--anton);text-transform:uppercase;letter-spacing:-.005em}
+.lead{font-size:clamp(17px,1.5vw,21px);color:var(--mu);max-width:56ch}
+.lead b{color:var(--tx);font-weight:650}
+/* grain */
+body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.05;background:url(assets/grain.png) 0 0/128px 128px}
+
+/* ===== Boutons ===== */
+.btn{--h:58px;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;height:var(--h);padding:0 26px 0 30px;border-radius:999px;font:650 16px/1 var(--sans);letter-spacing:.01em;white-space:nowrap;overflow:hidden;isolation:isolate;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .3s,background .3s,border-color .3s}
+.btn .ar{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.btn .ar svg{width:14px;height:14px}
+.btn-p{background:linear-gradient(180deg,#5ae67a,var(--g) 55%,#2fb851);color:var(--ink);box-shadow:0 1px 0 rgba(255,255,255,.55) inset,0 -2px 0 rgba(0,0,0,.18) inset,0 10px 30px -8px rgba(60,214,96,.65),0 0 0 1px rgba(60,214,96,.4)}
+.btn-p .ar{background:var(--ink);color:var(--g)}
+.btn-p::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.55) 48%,transparent 62%);transform:translateX(-120%);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.btn-s{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);color:var(--tx)}
+.btn-s .ar{background:rgba(60,214,96,.14);color:var(--g)}
+@media (hover:hover){
+  .btn-p:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 -2px 0 rgba(0,0,0,.18) inset,0 18px 44px -10px rgba(60,214,96,.85),0 0 0 1px rgba(60,214,96,.6)}
+  .btn-p:hover::after{transform:translateX(120%)}
+  .btn:hover .ar{transform:translateX(4px)}
+  .btn-s:hover{transform:translateY(-2px);border-color:rgba(60,214,96,.55);background:rgba(60,214,96,.07)}
+}
+.btn:active{transform:translateY(1px) scale(.985);transition-duration:.08s}
+.btn:focus-visible,.chip:focus-visible,.faq summary:focus-visible,.why-item:focus-visible,.snd:focus-visible,input:focus-visible,.xr-handle:focus-visible{outline:2px solid var(--g);outline-offset:4px}
+.btn[disabled]{opacity:.55;pointer-events:none}
+.btn-sm{--h:46px;padding:0 8px 0 20px;font-size:15px}
+.btn-sm .ar{width:32px;height:32px}
+
+/* ===== Ticker + nav ===== */
+.ticker{position:fixed;top:0;left:0;right:0;z-index:60;height:30px;background:var(--g);color:var(--ink);overflow:hidden;display:flex;align-items:center}
+.ticker .tr{display:flex;white-space:nowrap;animation:tick 38s linear infinite}
+.ticker span{font:400 14px/1 var(--anton);letter-spacing:.08em;text-transform:uppercase;padding:0 18px}
+.ticker span i{font-style:normal;opacity:.5;padding-left:36px}
+@keyframes tick{to{transform:translateX(-50%)}}
+.nav{position:fixed;top:30px;left:0;right:0;z-index:55;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.on{background:rgba(3,6,3,.94);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.nav .logo img{height:26px;width:auto}
+.nav .mid{display:flex;gap:30px;font-size:15px;color:var(--mu)}
+.nav .mid a{position:relative;padding:8px 0}
+.nav .mid a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1.5px;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav .mid a:hover{color:var(--tx)}.nav .mid a:hover::after{transform:scaleX(1)}
+.nav .rt{display:flex;align-items:center;gap:16px}
+.nav .pg{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--g);transform:scaleX(0);transform-origin:left;box-shadow:0 0 10px var(--g);will-change:transform}
+.nav .mid a.act{color:var(--tx)}.nav .mid a.act::after{transform:scaleX(1)}
+.mini-cd{font:600 13px/1 var(--mono);color:var(--g);letter-spacing:.02em;padding:9px 12px;border:1px solid rgba(60,214,96,.3);border-radius:999px;background:rgba(60,214,96,.06)}
+@media (max-width:980px){.nav .mid{display:none}}
+@media (max-width:560px){.mini-cd{display:none}.nav .wrap{height:64px}.nav .logo img{height:22px}}
+
+/* ===== Hero ===== */
+.js:not(.ready) .hero .wrap>div:first-child{opacity:0}
+.hero{position:relative;min-height:100svh;padding:128px 0 56px;overflow:hidden;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-bg .glow{position:absolute;left:50%;top:62%;width:1500px;height:1100px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(60,214,96,.42),rgba(11,58,26,.4) 45%,transparent 72%)}
+.hero-bg .beams{position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 118%,rgba(60,214,96,.0) 0deg 5deg,rgba(60,214,96,.07) 5deg 7deg);mask:radial-gradient(ellipse 70% 85% at 50% 100%,#000 25%,transparent 75%);-webkit-mask:radial-gradient(ellipse 70% 85% at 50% 100%,#000 25%,transparent 75%)}
+.hero-bg .floor{position:absolute;left:-50%;right:-50%;bottom:-6%;height:52%;overflow:hidden;transform:perspective(520px) rotateX(64deg);transform-origin:50% 100%}
+.hero-bg .floor::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(3,6,3,0) 10%,#030603 85%)}
+.hero-bg .floor::before{content:"";position:absolute;left:0;right:0;top:-70px;bottom:0;background-image:linear-gradient(rgba(60,214,96,.28) 1px,transparent 1px),linear-gradient(90deg,rgba(60,214,96,.28) 1px,transparent 1px);background-size:70px 70px;animation:floor 4s linear infinite;will-change:transform}
+@keyframes floor{to{transform:translateY(70px)}}
+.hero:not(.vis) .floor::before,.xr:not(.vis) .scan{animation-play-state:paused}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,4vw,70px);align-items:center}
+.hero h1{margin:22px 0 0}
+.hero h1 .pre{display:block;font:650 clamp(18px,1.7vw,24px)/1.2 var(--sans);color:var(--mu);margin-bottom:10px;letter-spacing:-.01em}
+.hero h1 .pre b{color:var(--tx);font-weight:650}
+.hero h1 .big{display:block;font:400 clamp(86px,min(11.4vw,19vh),196px)/.84 var(--anton);text-transform:uppercase;letter-spacing:-.01em}
+.hero h1 .big{position:relative}
+.hero h1 .big .l{display:inline-block;position:relative}
+.hero h1 .big .l i{font-style:normal;display:block}
+.hero h1 .big .l .b{position:absolute;left:0;top:0;filter:blur(18px);opacity:0;pointer-events:none}
+.hero h1 .fr{position:relative;display:inline-block}
+.streak{position:absolute;left:-12%;right:-12%;height:44px;margin-top:-22px;pointer-events:none;opacity:0;transform:scaleX(0);background:radial-gradient(closest-side,rgba(60,214,96,.6),rgba(60,214,96,0))}
+.streak::after{content:"";position:absolute;left:0;right:0;top:50%;height:4px;margin-top:-2px;background:radial-gradient(closest-side,#fff,rgba(255,255,255,0))}
+.hero-bg .bk{position:absolute;bottom:-60px;border-radius:50%;background:radial-gradient(closest-side,var(--c,#fff) 0%,var(--c,#fff) 30%,transparent 100%);opacity:0;animation:bk var(--d,20s) linear var(--dl,0s) infinite;will-change:transform}
+@keyframes bk{0%{transform:translate3d(0,0,0);opacity:0}8%{opacity:var(--o,.14)}50%{transform:translate3d(var(--sx,20px),-55vh,0)}92%{opacity:var(--o,.14)}100%{transform:translate3d(0,-112vh,0);opacity:0}}
+.hero:not(.vis) .bk{animation-play-state:paused}
+.wipe{position:absolute;top:-30%;bottom:-30%;left:0;width:42%;z-index:6;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.96) 30%,rgba(255,255,255,.96) 70%,rgba(255,255,255,0));transform:translateX(-140%) skewX(-22deg);will-change:transform}
+.hero h1 .fr{color:var(--g);text-shadow:0 0 60px rgba(60,214,96,.35)}
+.hero h1 .fr.sh .s{-webkit-background-clip:text;background-clip:text;color:transparent;background-repeat:no-repeat}
+.hero .sub{margin-top:20px;font:500 clamp(19px,1.9vw,26px)/1.25 var(--sans);letter-spacing:-.01em;max-width:30ch}
+.hero .sub em{font-style:normal;color:var(--g)}
+.priceline{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-top:24px}
+.priceline .now{font:400 clamp(58px,min(6vw,10vh),92px)/.85 var(--anton);background:linear-gradient(180deg,#fff 30%,#b9f5c8 70%,var(--g));-webkit-background-clip:text;background-clip:text;color:transparent}
+.priceline .was{font:400 clamp(26px,2.6vw,38px)/1 var(--anton);color:var(--mu2);position:relative;margin-bottom:6px}
+.priceline .was::after{content:"";position:absolute;left:-6%;right:-6%;top:52%;height:4px;background:var(--g);transform:rotate(-8deg);border-radius:4px;box-shadow:0 0 12px var(--g)}
+.priceline .tag{font:400 22px/1 var(--anton);color:var(--ink);background:var(--g);padding:9px 12px 8px;border-radius:10px;margin-bottom:8px;transform:rotate(-4deg);box-shadow:0 8px 26px -6px rgba(60,214,96,.7)}
+.priceline .cap{width:100%;font-size:14px;color:var(--mu2);margin-top:2px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.cd{display:flex;gap:10px;margin-top:26px;align-items:stretch}
+.cd .u{min-width:74px;padding:12px 10px 10px;border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid var(--line);text-align:center}
+.cd .u b{display:block;font:400 34px/1 var(--anton);font-variant-numeric:tabular-nums}
+.cd .u small{display:block;margin-top:6px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mu2)}
+.cd .lbl{display:flex;flex-direction:column;justify-content:center;padding-left:8px;font-size:14px;color:var(--mu);line-height:1.35}
+.cd .lbl b{color:var(--g);font-weight:650}
+/* device */
+.device-wrap{perspective:1600px;position:relative;justify-self:end;width:min(100%,520px,calc((100svh - 200px) * .8))}
+.device{position:relative;border-radius:30px;padding:10px;background:linear-gradient(150deg,rgba(255,255,255,.18),rgba(255,255,255,.03) 40%,rgba(60,214,96,.25));box-shadow:0 60px 120px -30px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08),0 0 90px -20px rgba(60,214,96,.45);transform:rotateY(-14deg) rotateX(6deg);transform-style:preserve-3d;will-change:transform}
+.device video{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;background:#000}
+.device::after{content:"";position:absolute;inset:10px;border-radius:22px;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.13),transparent 30%)}
+.device .reflect{position:absolute;left:6%;right:6%;top:100%;height:30%;margin-top:18px;background:radial-gradient(ellipse at 50% 0,rgba(60,214,96,.35),transparent 70%);filter:blur(24px)}
+.snd{position:absolute;right:24px;bottom:24px;z-index:3;display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 18px 0 14px;border-radius:999px;background:rgba(3,6,3,.82);border:1px solid rgba(255,255,255,.22);font-weight:650;font-size:14px;transform:translateZ(40px);transition:background .3s,border-color .3s,translate .25s,scale .25s}
+.snd svg{width:18px;height:18px;color:var(--g)}
+@media (hover:hover){.snd:hover{background:rgba(60,214,96,.18);border-color:var(--g);translate:0 -1px}}
+.snd:active{scale:.97}
+.dev-badge{position:absolute;left:-26px;top:12%;z-index:3;padding:12px 16px;border-radius:16px;background:rgba(3,6,3,.86);border:1px solid rgba(60,214,96,.35);font-size:13px;line-height:1.3;color:var(--mu);transform:translateZ(60px)}
+.dev-badge b{display:block;color:var(--tx);font-size:15px}
+@media (min-width:981px) and (max-height:800px){
+  .hero{padding:106px 0 30px}
+  .hero h1{margin-top:14px}
+  .hero h1 .big{font-size:min(11.4vw,16.5vh)}
+  .hero .sub{margin-top:12px;font-size:20px}
+  .priceline{margin-top:14px}.priceline .cap{display:none}
+  .cta-row{margin-top:18px}.cd{margin-top:16px}
+  .cd .u{padding:9px 10px 8px}.cd .u b{font-size:28px}
+}
+@media (max-width:980px){
+  .hero{padding-top:128px}
+  .hero .wrap{grid-template-columns:1fr}
+  .device-wrap{max-width:460px;width:100%;margin:10px auto 0}
+  .device{transform:rotateX(8deg)}
+  .dev-badge{left:-8px}
+}
+@media (max-width:560px){
+  .hero h1 .big{font-size:clamp(80px,26vw,132px)}
+  .cd .u{min-width:0;flex:1;padding:10px 4px}
+  .cd .u b{font-size:28px}
+  .cd .lbl{display:none}
+  .cta-row .btn{width:100%}
+  .snd{right:16px;bottom:16px}
+}
+
+/* ===== Logos confiance ===== */
+.trust{position:relative;padding:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(60,214,96,.035),transparent)}
+.trust .wrap{display:flex;align-items:center;gap:clamp(24px,5vw,80px)}
+.trust .t{flex:0 1 300px;max-width:300px;font:600 12px/1.45 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mu)}
+.trust .t b{display:block;color:var(--tx);letter-spacing:.06em;font:400 22px/1.05 var(--anton);margin-top:4px}
+.trust .lg{flex:1;display:flex;align-items:center;justify-content:space-around;gap:clamp(24px,5vw,70px);flex-wrap:wrap}
+.trust a{display:flex;align-items:center;gap:14px;color:var(--mu)}
+.trust a img{height:54px;width:auto;opacity:.8;filter:brightness(0) invert(1);transition:filter .45s,opacity .35s,transform .35s}
+.trust a.wide img{height:34px}
+.trust a span{font-size:12px;line-height:1.3;max-width:13ch}
+@media (hover:hover){.trust a:hover img{opacity:1;filter:none;transform:translateY(-2px)}}
+@media (max-width:760px){.trust .wrap{flex-direction:column;align-items:flex-start;gap:18px}.trust .lg{justify-content:space-between;width:100%}.trust a span{display:none}.trust a img{height:46px}.trust a.wide img{height:26px}}
+
+/* ===== Diagonal band ===== */
+.band{position:relative;height:clamp(150px,18vw,230px);overflow:hidden;display:grid;place-items:center}
+.band .row{position:absolute;left:-10%;right:-10%;display:flex;white-space:nowrap;padding:16px 0}
+.band .r1{background:var(--g);color:var(--ink);transform:rotate(-4deg);z-index:2;box-shadow:0 20px 60px -10px rgba(60,214,96,.5)}
+.band .r2{background:#0c140e;color:rgba(255,255,255,.75);transform:rotate(3deg);border-block:1px solid var(--line)}
+.band .row span{font:400 clamp(26px,3.2vw,44px)/1 var(--anton);text-transform:uppercase;padding:0 24px;letter-spacing:.01em}
+.band .row span i{font-style:normal;padding-left:48px;opacity:.45}
+
+/* ===== -50 ===== */
+.half{position:relative;padding:clamp(90px,12vw,160px) 0;overflow:hidden}
+.half .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.vol{position:relative;perspective:1200px;display:grid;place-items:center;min-height:440px}
+.vol .num{position:relative;font:400 clamp(150px,16.5vw,270px)/.8 var(--anton);color:#fff;transform-style:preserve-3d;will-change:transform;white-space:nowrap;
+  background:linear-gradient(180deg,#fff 20%,#c9f7d4 60%,#3CD660);-webkit-background-clip:text;background-clip:text;color:transparent}
+.vol .ext{position:absolute;inset:0;display:grid;place-items:center;font:400 clamp(150px,16.5vw,270px)/.8 var(--anton);white-space:nowrap;color:#0f4a22;pointer-events:none;transform-style:preserve-3d}
+.vol .ext span{position:absolute}
+.vol .halo{position:absolute;width:80%;height:60%;background:radial-gradient(closest-side,rgba(60,214,96,.45),transparent);filter:blur(30px)}
+.vol .num::after{content:attr(data-t);position:absolute;inset:0;background:linear-gradient(100deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) no-repeat;background-size:260% 100%;background-position:160% 0;-webkit-background-clip:text;background-clip:text;color:transparent;pointer-events:none}
+.vol .num.shine::after{animation:shine 1.6s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes shine{to{background-position:-60% 0}}
+.half .h2{font-size:clamp(40px,5.1vw,84px)}
+.half .roll{display:flex;align-items:baseline;gap:22px;margin:30px 0 8px;flex-wrap:wrap}
+.half .roll .a{font:400 clamp(34px,3.6vw,54px)/1 var(--anton);color:var(--mu2);text-decoration:line-through;text-decoration-color:var(--g);text-decoration-thickness:4px}
+.half .roll .b{font:400 clamp(64px,7vw,110px)/.9 var(--anton);color:var(--g);font-variant-numeric:tabular-nums}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.facts span{padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:14px;color:var(--mu)}
+.facts span b{color:var(--tx)}
+@media (max-width:900px){.half .wrap{grid-template-columns:1fr}.vol{min-height:300px;order:-1}}
+@media (max-width:600px){.vol .num,.vol .ext{font-size:30vw}.vol{min-height:220px}}
+
+/* ===== Sections preuves ===== */
+.sec-head{padding-top:clamp(90px,10vw,140px);padding-bottom:40px}
+.sec-head .h2{margin-top:18px}
+.sec-head .lead{margin-top:22px}
+.browser{position:relative;border-radius:18px;overflow:hidden;background:#0b0f0c;border:1px solid rgba(255,255,255,.12);box-shadow:0 50px 120px -30px rgba(0,0,0,.9),0 0 80px -30px rgba(60,214,96,.35)}
+.browser .bar{height:40px;display:flex;align-items:center;gap:8px;padding:0 14px;background:#121814;border-bottom:1px solid rgba(255,255,255,.07)}
+.browser .bar i{width:11px;height:11px;border-radius:50%;background:#2a332c}
+.browser .bar i:nth-child(1){background:#ff5f57}.browser .bar i:nth-child(2){background:#febc2e}.browser .bar i:nth-child(3){background:#28c840}
+.browser .url{margin-left:12px;flex:1;max-width:360px;height:24px;border-radius:8px;background:rgba(255,255,255,.06);font:500 12px/24px var(--mono);color:var(--mu);padding:0 12px;display:flex;align-items:center;gap:8px;overflow:hidden;white-space:nowrap}
+.browser .url svg{width:11px;height:11px;color:var(--g);flex:none}
+.browser .scr{position:relative;aspect-ratio:16/10;overflow:hidden;background:#000}
+
+/* Lessard pin */
+.lessard{position:relative;height:340vh}
+.lessard .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center;overflow:hidden}
+.lessard .stage{position:relative;width:min(1120px,92vw);margin:0 auto;perspective:1800px}
+.lessard .browser{transform-origin:50% 60%;will-change:transform}
+.lessard canvas{width:100%;height:100%;object-fit:cover;background:#0b0f0c url(assets/lessard/01.webp) center/cover no-repeat}
+.lessard .page{position:absolute;inset:0;opacity:0}
+.lessard .page img{width:100%;will-change:transform}
+.lessard .caps{position:absolute;inset:0;pointer-events:none}
+.cap{position:absolute;max-width:310px;padding:16px 18px;border-radius:16px;background:rgba(3,6,3,.92);border:1px solid rgba(60,214,96,.35);box-shadow:0 20px 50px -20px rgba(0,0,0,.9);opacity:0;transform:translateY(20px)}
+.cap .k{font:600 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--g)}
+.cap p{margin-top:8px;font-size:15px;line-height:1.4;color:var(--mu)}
+.cap p b{color:var(--tx)}
+.cap.c1{left:-4%;top:14%}.cap.c2{right:-4%;top:40%}.cap.c3{left:-2%;bottom:8%}
+.lessard .ttl{position:absolute;left:0;right:0;top:calc(30px + 74px + 2vh);text-align:center;z-index:3}
+.lessard .ttl .eye{justify-content:center}
+.lessard .ttl h3{font:400 clamp(30px,3.6vw,54px)/1 var(--anton);text-transform:uppercase;margin-top:12px}
+.prog{position:absolute;left:50%;bottom:4vh;transform:translateX(-50%);width:min(420px,70vw);height:3px;border-radius:3px;background:rgba(255,255,255,.1);overflow:hidden;z-index:3}
+.prog i{display:block;height:100%;width:100%;background:var(--g);transform:scaleX(0);transform-origin:left;box-shadow:0 0 12px var(--g)}
+@media (max-width:900px){
+  .lessard{height:300vh}
+  .cap{max-width:none;left:4%!important;right:4%!important;top:auto!important;bottom:-4px!important;padding:12px 14px}
+  .cap p{font-size:14px}
+  .lessard .stage{width:94vw}
+  .lessard .scr{aspect-ratio:4/5}
+  .lessard .page img{width:215%;max-width:none}
+  .lessard .ttl{top:calc(30px + 64px + 3vh);padding:0 20px}
+}
+
+/* Base parcours */
+.base{position:relative}
+.base .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(30px,4vw,64px);align-items:start;padding-bottom:120px}
+.base .sticky{position:sticky;top:calc(30px + 74px + 24px)}
+.base .scr>*{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform 1.2s cubic-bezier(.2,.8,.2,1);transform:scale(1.04)}
+.base .scr>.on{opacity:1;transform:scale(1)}
+.base .scr .ai{display:flex;flex-direction:column;justify-content:center;gap:18px;padding:8% 10%;background:radial-gradient(ellipse at 50% 0,rgba(60,214,96,.12),transparent 60%),#070d09}
+.ai .lab{display:flex;justify-content:space-between;font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mu2)}
+.ai .lab b{color:var(--g);font-weight:600}
+.ai .q{align-self:flex-end;padding:14px 20px;border-radius:20px 20px 6px 20px;background:#1b2a1f;font-size:clamp(14px,1.5vw,19px);font-weight:500}
+.ai .a{padding:18px 20px;border-radius:20px 20px 20px 6px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:clamp(13px,1.3vw,16px);color:var(--mu)}
+.ai .a .src{margin-top:12px;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:rgba(60,214,96,.08);border:1px solid rgba(60,214,96,.35)}
+.ai .a .src img{width:56px;height:auto}
+.ai .a .src b{display:block;color:var(--tx);font-size:15px}
+.ai .a .src small{font:500 12px var(--mono);color:var(--g)}
+.steps{position:relative;padding-left:34px}
+.steps::before{content:"";position:absolute;left:8px;top:10px;bottom:10px;width:2px;background:rgba(255,255,255,.08)}
+.steps .fill{position:absolute;left:8px;top:10px;width:2px;height:0;background:var(--g);box-shadow:0 0 12px var(--g)}
+.step{position:relative;min-height:62vh;display:flex;flex-direction:column;justify-content:center;opacity:.32;transition:opacity .5s}
+.step.on{opacity:1}
+.step::before{content:"";position:absolute;left:-32px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--bg);border:2px solid rgba(255,255,255,.25);transition:all .4s}
+.step.on::before{background:var(--g);border-color:var(--g);box-shadow:0 0 0 6px rgba(60,214,96,.18),0 0 20px var(--g)}
+.step .n{font:600 12px/1 var(--sans);letter-spacing:.24em;color:var(--g);text-transform:uppercase}
+.step h3{font:400 clamp(30px,3vw,46px)/1 var(--anton);text-transform:uppercase;margin-top:10px}
+.step p{margin-top:12px;color:var(--mu);max-width:38ch}
+.step p b{color:var(--tx)}
+.step .tagx{margin-top:14px;font:600 10.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mu2)}
+@media (max-width:900px){
+  .base .grid{grid-template-columns:1fr;gap:0}
+  .base .sticky{top:calc(30px + 64px);z-index:4;margin:0 calc(var(--pad)*-1);padding:12px var(--pad) 22px;background:linear-gradient(var(--bg) 88%,transparent)}
+  .step{min-height:56vh}
+}
+
+/* Réjean */
+.quote{position:relative;padding:clamp(90px,11vw,150px) 0;overflow:hidden;background:radial-gradient(ellipse 60% 70% at 25% 50%,rgba(60,214,96,.16),transparent 70%)}
+.quote .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,5vw,80px);align-items:center}
+.qvid{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 100px -30px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.1)}
+.qvid video{width:100%;height:100%;object-fit:cover}
+.qvid .who{position:absolute;left:18px;bottom:18px;right:18px;padding:14px 16px;border-radius:14px;background:rgba(3,6,3,.84);font-size:13px;color:var(--mu);line-height:1.35}
+.qvid .who b{display:block;color:var(--tx);font-size:16px}
+.qvid .snd{top:18px;bottom:auto;right:18px}
+.bigq{font:400 clamp(54px,7.4vw,124px)/.9 var(--anton);text-transform:uppercase;letter-spacing:-.005em}
+.bigq .w{display:inline-block;transition:color .3s,text-shadow .3s;color:#fff}
+.bigq .w.gw{color:var(--g)}
+.bigq.k .w{color:rgba(255,255,255,.22)}
+.bigq.k .w.lit{color:#fff}
+.bigq.k .w.gw.lit,.bigq .w.gw.lit{color:var(--g);text-shadow:0 0 40px rgba(60,214,96,.5)}
+.q2{margin-top:34px;padding-top:28px;border-top:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+.q2 .mk{font:400 70px/.7 var(--anton);color:var(--g)}
+.q2 p{font-size:clamp(17px,1.6vw,21px);color:var(--mu);font-weight:500}
+.q2 p b{color:var(--tx);font-weight:650}
+.q2 small{display:block;margin-top:10px;font-size:13px;color:var(--mu2)}
+@media (max-width:900px){.quote .wrap{grid-template-columns:1fr}.qvid{max-width:420px}}
+
+
+/* Développeur */
+.dev{position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#020402}
+.dev .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center;min-height:min(92vh,900px);padding-top:90px;padding-bottom:90px}
+.dev .ph{position:absolute;left:0;top:0;bottom:0;width:58%;z-index:1}
+.dev .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:saturate(1.05) contrast(1.05)}
+.dev .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 45%,#020402 96%),linear-gradient(0deg,#020402 2%,transparent 30%),radial-gradient(ellipse at 50% 60%,transparent 40%,rgba(2,4,2,.55))}
+.dev .ph.miss{background:radial-gradient(ellipse at 40% 50%,rgba(60,214,96,.18),transparent 60%)}
+.dev .ph.miss img{display:none}
+.dev:has(.ph.miss) .tx{grid-column:1/-1;max-width:760px}
+.dev .tx{grid-column:2}
+.dev .name{display:flex;align-items:center;gap:14px;margin-top:26px;flex-wrap:wrap}
+.dev .name b{font:400 30px/1 var(--anton);text-transform:uppercase;letter-spacing:.01em}
+.dev .name span{font-size:14px;color:var(--mu);padding:7px 12px;border-radius:999px;border:1px solid rgba(60,214,96,.35);background:rgba(60,214,96,.07)}
+.dev .bigq{font-size:clamp(48px,5.6vw,96px);margin-top:20px}
+.dev .bigq .w{color:#fff}
+.dev .lead{margin-top:24px}
+.dev .pts{list-style:none;margin-top:30px;display:grid;gap:16px}
+.dev .pts li{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start}
+.dev .pts .n{font:400 22px/1.2 var(--anton);color:var(--g)}
+.dev .pts b{display:block;font-weight:650;font-size:17px}
+.dev .pts small{font-size:15px;color:var(--mu)}
+.dev.rev{border-top:0}
+.dev.rev .ph{left:auto;right:0;width:50%}
+.dev.rev .ph img{object-position:50% 22%}
+.dev.rev .ph::after{background:linear-gradient(270deg,transparent 45%,#020402 97%),linear-gradient(0deg,#020402 2%,transparent 30%)}
+.dev.rev .tx{grid-column:1}
+@media (max-width:900px){
+  .dev .wrap{grid-template-columns:1fr;min-height:0;padding-top:0}
+  .dev .ph{position:relative;width:auto;height:72vh;max-height:620px}
+  .dev .ph::after{background:linear-gradient(0deg,#020402 4%,transparent 45%)}
+  .dev .ph.miss{height:160px}
+  .dev .tx,.dev.rev .tx{grid-column:1;margin-top:-120px;position:relative}
+  .dev.rev .ph{width:auto}
+  .dev.rev .ph::after{background:linear-gradient(0deg,#020402 4%,transparent 45%)}
+}
+
+/* Radiographie */
+.xr{padding-bottom:40px}
+.xr-box{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:16/9;border:1px solid rgba(255,255,255,.12);user-select:none;-webkit-user-select:none;touch-action:pan-y;box-shadow:0 50px 120px -30px rgba(0,0,0,.9)}
+.xr-box>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.xr-code{position:absolute;inset:0;background:#030a05;clip-path:inset(0 0 0 var(--x,55%));overflow:hidden}
+.xr-code::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(60,214,96,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(60,214,96,.07) 1px,transparent 1px);background-size:32px 32px}
+.xr-code pre{position:absolute;right:4%;top:7%;width:min(640px,88%);font:400 clamp(9.5px,1.05vw,14px)/1.65 var(--mono);color:#9ab7a1;white-space:pre-wrap}
+.xr-code pre .t{color:#6ee68a}.xr-code pre .a{color:#e8c66a}.xr-code pre .s{color:#cfe9d5}.xr-code pre .c{color:#4d6b55}
+.xr-code .scan{position:absolute;inset:0;background:linear-gradient(transparent 42%,rgba(60,214,96,.18) 50%,transparent 58%);transform:translateY(-58%);animation:scan 3.5s linear infinite;will-change:transform}
+@keyframes scan{to{transform:translateY(58%)}}
+.xr-handle{position:absolute;top:0;bottom:0;left:var(--x,55%);width:54px;margin-left:-27px;cursor:ew-resize;display:grid;place-items:center;z-index:3;touch-action:none}
+.xr-handle::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:var(--g);box-shadow:0 0 18px var(--g)}
+.xr-handle span{position:relative;width:50px;height:50px;border-radius:50%;background:var(--g);color:var(--ink);display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(60,214,96,.8);transition:transform .2s}
+.xr-handle:hover span{transform:scale(1.08)}
+.xr-handle svg{width:22px;height:22px}
+.xr-lbl{position:absolute;top:16px;z-index:2;padding:8px 14px;border-radius:999px;font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;background:rgba(3,6,3,.9);border:1px solid var(--line)}
+.xr-lbl.l{left:16px}.xr-lbl.r{right:16px;color:var(--g);border-color:rgba(60,214,96,.4)}
+.xr-note{margin-top:14px;font-size:13px;color:var(--mu2)}
+.xr-lbl .sm{display:none}
+@media (max-width:700px){.xr-lbl .lg{display:none}.xr-lbl .sm{display:inline}}
+@media (max-width:700px){.xr-box{aspect-ratio:4/5}.xr-box>img{object-position:30% top}.xr-code pre{right:5%;left:5%;width:auto;top:16%}}
+
+/* Pourquoi */
+.why{padding-bottom:clamp(90px,10vw,140px)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:start;margin-top:30px}
+.why-list{border-top:1px solid var(--line)}
+.why-item{display:grid;grid-template-columns:70px 1fr 28px;align-items:center;gap:14px;width:100%;text-align:left;padding:22px 4px;border-bottom:1px solid var(--line);transition:background .3s,padding .35s;border-radius:0}
+.why-item .n{font:400 28px/1 var(--anton);color:var(--mu2);transition:color .3s}
+.why-item .t{font:400 clamp(24px,2.4vw,34px)/1 var(--anton);text-transform:uppercase;transition:color .3s}
+.why-item .pl{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;transition:all .35s}
+.why-item .pl svg{width:12px;height:12px;transition:transform .35s}
+.why-item[aria-selected="true"]{padding-left:16px;background:linear-gradient(90deg,rgba(60,214,96,.1),transparent)}
+.why-item[aria-selected="true"] .n,.why-item[aria-selected="true"] .t{color:var(--g)}
+.why-item[aria-selected="true"] .pl{background:var(--g);border-color:var(--g);color:var(--ink)}
+.why-item[aria-selected="true"] .pl svg{transform:rotate(45deg)}
+@media (hover:hover){.why-item:hover .t{color:#fff}.why-item:hover .pl{border-color:var(--g)}}
+.why-panel{position:sticky;top:140px;min-height:430px;padding:clamp(26px,3vw,40px);border-radius:var(--r);background:linear-gradient(160deg,rgba(60,214,96,.14),rgba(255,255,255,.02) 50%);border:1px solid rgba(60,214,96,.25);overflow:hidden}
+.why-panel .big{position:absolute;right:-10px;bottom:-40px;font:400 260px/1 var(--anton);color:rgba(60,214,96,.07);pointer-events:none}
+.why-panel .k{font:600 12px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--g)}
+.why-panel h3{margin-top:14px;font:650 clamp(26px,2.6vw,36px)/1.08 var(--sans);letter-spacing:-.02em}
+.why-panel .p{margin-top:16px;color:var(--mu);font-size:17px}
+.why-panel .p b{color:var(--tx)}
+.why-panel .do{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.why-panel .do .k{color:var(--mu2)}
+.why-panel ul{list-style:none;margin-top:12px;display:grid;gap:10px}
+.why-panel li{display:flex;gap:12px;font-size:15.5px}
+.why-panel li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--g) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306100a' stroke-width='3.5'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat}
+.why-panel .body{transition:opacity .3s,transform .3s}
+.why-panel .body.swap{opacity:0;transform:translateY(10px)}
+@media (max-width:900px){.why-grid{grid-template-columns:1fr}.why-panel{position:relative;top:0;min-height:0;margin:10px 0 16px}.why-item{grid-template-columns:50px 1fr 28px;padding:18px 2px}}
+
+/* Offre */
+.offer{position:relative;padding:clamp(90px,11vw,150px) 0;overflow:hidden}
+.offer::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 50%,rgba(60,214,96,0) 0 6deg,rgba(60,214,96,.06) 6deg 8deg),radial-gradient(circle at 50% 50%,rgba(60,214,96,.35),rgba(11,58,26,.5) 35%,var(--bg) 70%);mask:radial-gradient(circle at 50% 50%,#000 30%,transparent 72%);-webkit-mask:radial-gradient(circle at 50% 50%,#000 30%,transparent 72%)}
+.ticket{position:relative;max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;border-radius:30px;overflow:hidden;background:rgba(5,12,7,.95);border:1px solid rgba(60,214,96,.35);box-shadow:0 60px 140px -30px rgba(0,0,0,.95),0 0 120px -40px rgba(60,214,96,.6)}
+.ticket .l{padding:clamp(28px,4vw,52px);border-right:1px dashed rgba(60,214,96,.35);position:relative}
+.ticket .l::before,.ticket .l::after{content:"";position:absolute;right:-17px;width:34px;height:34px;border-radius:50%;background:var(--bg)}
+.ticket .l::before{top:-17px}.ticket .l::after{bottom:-17px}
+.ticket .r{padding:clamp(28px,4vw,52px)}
+.pill{display:inline-block;padding:9px 14px;border-radius:999px;background:var(--ink);border:1px solid rgba(255,255,255,.2);font:650 12px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase}
+.ticket .was{margin-top:26px;font:400 44px/1 var(--anton);color:var(--mu2);text-decoration:line-through;text-decoration-color:var(--g);text-decoration-thickness:4px}
+.ticket .now{white-space:nowrap;font:400 clamp(80px,8.4vw,124px)/.85 var(--anton);background:linear-gradient(180deg,#fff 30%,#c6f6d2 65%,var(--g));-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:6px}
+.ticket .sm{margin-top:14px;color:var(--mu);font-size:15px}
+.ticket .sm b{color:var(--g)}
+.ticket .ok{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap}
+.ticket .ok span{font:400 15px/1 var(--anton);letter-spacing:.04em;text-transform:uppercase;padding:9px 12px;border-radius:8px;background:rgba(60,214,96,.12);color:var(--g)}
+.inc{list-style:none;display:grid;gap:14px;margin-top:22px}
+.inc li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px}
+.inc li svg{flex:none;width:22px;height:22px;color:var(--g);margin-top:1px}
+.inc li small{display:block;color:var(--mu2);font-size:13.5px}
+.ticket .btn{width:100%;margin-top:28px}
+@media (max-width:820px){.ticket{grid-template-columns:1fr}.ticket .l{border-right:0;border-bottom:1px dashed rgba(60,214,96,.35)}.ticket .l::before,.ticket .l::after{display:none}}
+
+/* Formulaire */
+.form-sec{padding:clamp(90px,10vw,140px) 0}
+.form-sec .h2{font-size:clamp(40px,5vw,76px)}
+.form-sec .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,80px);align-items:start}
+.form{padding:clamp(24px,3vw,40px);border-radius:var(--r);background:rgba(255,255,255,.03);border:1px solid var(--line)}
+.fld{display:grid;gap:8px;margin-bottom:16px}
+.fld label,.fld .lb{font-size:13px;font-weight:650;letter-spacing:.04em;color:var(--mu)}
+.fld input{height:54px;padding:0 18px;border-radius:14px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.14);color:var(--tx);font:500 16px var(--sans);transition:border-color .25s,box-shadow .25s,background .25s}
+.fld input::placeholder{color:rgba(255,255,255,.3)}
+.fld input:hover{border-color:rgba(255,255,255,.28)}
+.fld input:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 4px rgba(60,214,96,.15);background:rgba(0,0,0,.5)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.03);font-size:14.5px;font-weight:500;color:var(--mu);transition:all .25s}
+@media (hover:hover){.chip:hover{border-color:rgba(60,214,96,.55);color:var(--tx)}}
+.chip[aria-pressed="true"]{background:var(--g);border-color:var(--g);color:var(--ink);font-weight:650}
+.chip:active{transform:scale(.97)}
+.consent{display:flex;gap:12px;align-items:flex-start;margin:20px 0 6px;font-size:13.5px;color:var(--mu);line-height:1.45;cursor:pointer}
+.consent input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;margin-top:1px;border-radius:7px;border:1.5px solid rgba(255,255,255,.3);background:rgba(0,0,0,.3);display:grid;place-items:center;cursor:pointer;transition:all .2s}
+.consent input:checked{background:var(--g);border-color:var(--g)}
+.consent input:checked::after{content:"";width:11px;height:6px;border:solid var(--ink);border-width:0 0 2.5px 2.5px;transform:rotate(-45deg) translate(1px,-1px)}
+.consent a{color:var(--g);text-decoration:underline;text-underline-offset:3px}
+.form .btn{width:100%;margin-top:14px}
+.form .err{display:none;margin-top:12px;font-size:14px;color:#ff8a80}
+.form .done{display:none;text-align:center;padding:30px 10px}
+.form .done h3{font:400 40px/1 var(--anton);text-transform:uppercase;color:var(--g)}
+.form .done p{margin-top:12px;color:var(--mu)}
+.form.sent .done{display:block}.form.sent .fs{display:none}
+.direct{margin-top:30px;display:grid;gap:12px}
+.direct a{display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.02);transition:border-color .3s,background .3s,transform .3s}
+.direct a .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(60,214,96,.12);color:var(--g);flex:none}
+.direct a .ic svg{width:20px;height:20px}
+.direct a small{display:block;font-size:12.5px;color:var(--mu2)}
+.direct a b{font-weight:650}
+.direct a .go{margin-left:auto;color:var(--mu2);transition:transform .3s,color .3s}
+@media (hover:hover){.direct a:hover{border-color:rgba(60,214,96,.5);background:rgba(60,214,96,.05);transform:translateY(-2px)}.direct a:hover .go{transform:translateX(4px);color:var(--g)}}
+@media (max-width:900px){.form-sec .wrap{grid-template-columns:1fr}}
+@media (max-width:520px){.two{grid-template-columns:1fr;gap:0}}
+
+/* FAQ */
+.faq{padding-bottom:clamp(80px,9vw,120px)}
+.faq .list{margin-top:34px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;font:650 clamp(18px,1.8vw,22px)/1.3 var(--sans);letter-spacing:-.01em;transition:color .25s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pl{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;transition:all .3s}
+.faq summary .pl svg{width:13px;height:13px;transition:transform .3s}
+.faq details[open] summary .pl{background:var(--g);border-color:var(--g);color:var(--ink)}
+.faq details[open] summary .pl svg{transform:rotate(45deg)}
+@media (hover:hover){.faq summary:hover{color:var(--g)}}
+.faq details p{padding:0 4px 24px;color:var(--mu);max-width:70ch}
+.faq details .ans{overflow:hidden}
+
+/* Final + footer */
+.final{position:relative;padding:clamp(90px,12vw,170px) 0;text-align:center;overflow:hidden}
+.final::before{content:"";position:absolute;left:50%;bottom:-40%;width:1400px;height:900px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(60,214,96,.45),transparent)}
+.final .h2{position:relative;font-size:clamp(70px,12vw,190px)}
+.final p{position:relative;margin:22px auto 0;color:var(--mu);font-size:19px}
+.final .cta-row{position:relative;justify-content:center}
+footer{border-top:1px solid var(--line);padding:40px 0 calc(40px + env(safe-area-inset-bottom))}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--mu2)}
+footer img{height:22px}
+footer a:hover{color:var(--g)}
+footer nav{display:flex;gap:22px;flex-wrap:wrap}
+
+/* Barre mobile */
+.mbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:58;display:none;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 18px;border-radius:999px;background:rgba(6,16,10,.97);border:1px solid rgba(60,214,96,.4);box-shadow:0 20px 40px -10px rgba(0,0,0,.8);transform:translateY(140%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.mbar.on{transform:none}
+.mbar .p b{font:400 24px/1 var(--anton);color:var(--g)}
+.mbar .p s{font:400 15px var(--anton);color:var(--mu2);margin-left:6px}
+.mbar .p small{display:block;font-size:11px;color:var(--mu2);margin-top:3px}
+@media (max-width:760px){.mbar{display:flex}footer{padding-bottom:calc(100px + env(safe-area-inset-bottom))}}
+
+.rv{opacity:0;transform:translateY(40px)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+  .device{transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true"><div class="tr" id="tick"></div></div>
+
+<header class="nav" id="nav">
+  <i class="pg" id="pg" aria-hidden="true"></i>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="EMD Média — haut de page"><img src="assets/emd-logo.svg" alt="EMD Média" width="72" height="26"></a>
+    <nav class="mid" aria-label="Sections">
+      <a href="#realisations">Nos sites</a>
+      <a href="#pourquoi">Pourquoi ça vend</a>
+      <a href="#offre">L’offre</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <div class="rt">
+      <span class="mini-cd" id="miniCd" aria-live="off">—</span>
+      <a class="btn btn-p btn-sm" href="#reserver">Réserver ma place<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"><div class="floor"></div><div class="beams"></div><div class="glow"></div></div>
+  <div class="wrap">
+    <div>
+      <span class="eye">Offre limitée — jusqu’au 30 novembre</span>
+      <h1>
+        <span class="pre">EMD Média · <b>ton site web pro à -50 %</b></span>
+        <span class="big" id="bf"><span class="w1">BLACK</span><br><span class="fr">FRIDAY</span></span>
+      </h1>
+      <p class="sub">Un site qui prend les demandes <em>et te sauve des appels.</em></p>
+      <div class="priceline">
+        <span class="now">2 000 $</span><span class="was">4 000 $</span><span class="tag">-50 %</span>
+        <span class="cap">EMD Croissance · site sur mesure avec réservation, rendez-vous ou soumission en ligne</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-p" href="#reserver">Réserver ma place<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="btn btn-s" href="#realisations">Voir nos sites en action<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+      </div>
+      <div class="cd" id="cd" role="timer" aria-label="Temps restant avant la fin de l’offre">
+        <div class="u"><b data-k="d">00</b><small>jours</small></div>
+        <div class="u"><b data-k="h">00</b><small>heures</small></div>
+        <div class="u"><b data-k="m">00</b><small>min</small></div>
+        <div class="u"><b data-k="s">00</b><small>sec</small></div>
+        <div class="lbl"><span><b>5 places</b> seulement</span><span>Fin le 30 novembre, minuit</span></div>
+      </div>
+    </div>
+    <div class="device-wrap">
+      <div class="device" id="device">
+        <video id="heroVid" src="assets/bf-4x5.mp4" poster="assets/bf-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Vidéo Black Friday EMD : visite du site de la Base Plein Air de la Chaudière"></video>
+        <button class="snd" id="heroSnd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M11 5L6 9H3v6h3l5 4z"/><path class="on" d="M16 9a4 4 0 010 6M19 6a8 8 0 010 12"/></svg><span>Activer le son</span></button>
+        <div class="dev-badge"><b>« C’est wow. »</b>Réjean, Base Plein Air</div>
+        <div class="reflect" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIANCE -->
+<section class="trust" aria-label="Ils nous font confiance">
+  <div class="wrap">
+    <p class="t">Ils nous font confiance<b>Des sites en ligne. Des vrais clients.</b></p>
+    <div class="lg">
+      <a href="https://www.lessardmecanique.ca/" target="_blank" rel="noopener" class="wide"><img src="assets/logos/lessard-logo.webp" alt="Lessard Mécanique" width="420" height="96" loading="lazy"><span>Tracteurs, Saint-Georges</span></a>
+      <a href="https://www.pleinairchaudiere.ca/" target="_blank" rel="noopener"><img src="assets/logos/base-logo.webp" alt="Base Plein Air de la Chaudière" width="1439" height="1093" loading="lazy"><span>Plein air, Vallée-Jonction</span></a>
+      <a href="#pourquoi"><img src="assets/logos/carl-logo.webp" alt="Carl Perreault, électricien" width="300" height="200" loading="lazy"><span>Électricien</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- BANDE -->
+<div class="band" aria-hidden="true">
+  <div class="row r2" id="band2"></div>
+  <div class="row r1" id="band1"></div>
+</div>
+
+<!-- -50 -->
+<section class="half">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eye">Black Friday · EMD Croissance</span>
+      <h2 class="h2" style="margin-top:18px">Le même site.<br><span class="g">La moitié du prix.</span></h2>
+      <div class="roll"><span class="a">4 000 $</span><span class="b" id="rollPrice">2 000 $</span></div>
+      <p class="lead">Pas une version allégée. <b>Le site Croissance complet</b>, fait sur mesure pour ton entreprise, avec la prise de demandes en ligne. Seulement pour les 5 premiers.</p>
+      <div class="facts"><span><b>5</b> places</span><span>En ligne en <b>7 à 14 jours</b></span><span>Jusqu’au <b>30 novembre</b></span></div>
+    </div>
+    <div class="vol" id="vol" aria-hidden="true">
+      <div class="halo"></div>
+      <div class="ext" id="ext"></div>
+      <div class="num" id="volNum" data-t="-50 %">-50 %</div>
+    </div>
+  </div>
+</section>
+
+<!-- LESSARD -->
+<section id="realisations" aria-label="Réalisation : Lessard Mécanique">
+  <div class="wrap sec-head">
+    <span class="eye">Preuve n° 1 · Lessard Mécanique</span>
+    <h2 class="h2">On ne fait pas<br><span class="g">des sites ordinaires.</span></h2>
+    <p class="lead">Un concessionnaire de tracteurs à Saint-Georges. Une animation d’accueil qui arrête le pouce, <b>un inventaire que Google lit fiche par fiche</b>, et un bouton pour appeler toujours à portée.</p>
+  </div>
+  <div class="lessard" id="lessard">
+    <div class="stick">
+      <div class="stage">
+        <div class="browser" id="lBrowser">
+          <div class="bar"><i></i><i></i><i></i><span class="url"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 00-5 5v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zm3 8H9V7a3 3 0 016 0z"/></svg>lessardmecanique.ca</span></div>
+          <div class="scr">
+            <canvas id="lCanvas" width="1200" height="750" aria-label="Animation d’accueil du site Lessard Mécanique : un tracteur Mahindra dans un champ"></canvas>
+            <div class="page" id="lPage"><img src="assets/lessard-page.webp" alt="Page d’accueil de Lessard Mécanique : choix des marques Mahindra, Bobcat et Solis" loading="lazy" width="1440" height="2105"></div>
+          </div>
+        </div>
+        <div class="caps">
+          <div class="cap c1"><span class="k">01 · L’effet wow</span><p>L’accueil s’anime <b>au défilement</b>. On reste, on regarde, on retient le nom.</p></div>
+          <div class="cap c2"><span class="k">02 · Trouvable</span><p>Chaque tracteur a <b>sa propre page lisible par Google</b>, pas juste une image.</p></div>
+          <div class="cap c3"><span class="k">03 · Simple</span><p>Choisir sa marque, trouver son tracteur, <b>appeler en un clic</b>.</p></div>
+        </div>
+      </div>
+      <div class="prog" aria-hidden="true"><i id="lProg"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- BASE -->
+<section class="base" aria-label="Réalisation : Base Plein Air de la Chaudière">
+  <div class="wrap sec-head">
+    <span class="eye">Preuve n° 2 · Base Plein Air de la Chaudière</span>
+    <h2 class="h2">Le site qui prend<br><span class="g">les réservations.</span></h2>
+    <p class="lead">Le même parcours que dans la vidéo, arrêt par arrêt. Le client choisit, réserve et laisse son numéro. <b>L’équipe reçoit la demande, sans un appel.</b></p>
+  </div>
+  <div class="wrap grid">
+    <div class="sticky">
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><span class="url"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 00-5 5v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zm3 8H9V7a3 3 0 016 0z"/></svg><span id="bUrl">pleinairchaudiere.ca</span></span></div>
+        <div class="scr" id="bScr">
+          <img class="on" src="assets/etape-01.webp" alt="Accueil du site de la Base Plein Air de la Chaudière" loading="lazy">
+          <img src="assets/etape-02.webp" alt="Page Réserver : choix entre embarcation et camping" loading="lazy">
+          <img src="assets/etape-03.webp" alt="Choix de l’embarcation, du jour et de l’heure" loading="lazy">
+          <img src="assets/etape-04.webp" alt="Le client entre son nom et son téléphone et envoie la réservation" loading="lazy">
+          <video src="assets/temoignage.mp4" poster="assets/temoignage.webp" muted playsinline loop preload="none" aria-label="Réjean, propriétaire, parle du site"></video>
+          <div class="ai" aria-label="Exemple illustratif d’une réponse d’assistant IA">
+            <div class="lab"><span>Assistant IA</span><b>Exemple illustratif</b></div>
+            <div class="q">Où louer un kayak en Beauce ?</div>
+            <div class="a">Une adresse qui revient souvent :
+              <div class="src"><img src="assets/logos/base-logo.webp" alt=""><div><b>Base Plein Air de la Chaudière</b><small>pleinairchaudiere.ca</small></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="steps" id="steps">
+      <div class="fill" id="stepFill"></div>
+      <div class="step on" data-i="0" data-url="pleinairchaudiere.ca"><span class="n">Arrêt 01</span><h3>Les activités</h3><p>Camping, kayak, paddleboard, Tiki Bar : <b>tout se voit d’un coup d’œil</b>, avec de vraies photos.</p><span class="tagx">Exemple de site · Base Plein Air</span></div>
+      <div class="step" data-i="1" data-url="pleinairchaudiere.ca/reserver"><span class="n">Arrêt 02</span><h3>La réservation</h3><p>Un bouton, une page claire. <b>Embarcation ou camping</b>, le client choisit.</p><span class="tagx">Exemple de site · Base Plein Air</span></div>
+      <div class="step" data-i="2" data-url="pleinairchaudiere.ca/reserver"><span class="n">Arrêt 03</span><h3>Le client choisit</h3><p>L’embarcation, le jour, l’heure, la durée. <b>Les plages déjà prises sont bloquées.</b></p><span class="tagx">Exemple de site · Base Plein Air</span></div>
+      <div class="step" data-i="3" data-url="pleinairchaudiere.ca/reserver"><span class="n">Arrêt 04</span><h3>La demande arrive</h3><p>Nom, téléphone, envoyer. <b>La demande tombe directement dans le système de l’équipe.</b></p><span class="tagx">Exemple de site · Base Plein Air</span></div>
+      <div class="step" data-i="4" data-url="pleinairchaudiere.ca"><span class="n">Arrêt 05</span><h3>Ce qu’il en dit</h3><p>« Avant, on était à vieille mode un peu sur le papier, puis on perd des papiers. <b>Puis ça va nous sauver de l’ouvrage, beaucoup.</b> »</p><span class="tagx">Témoignage · Réjean, propriétaire</span></div>
+      <div class="step" data-i="5" data-url="Assistant IA"><span class="n">Arrêt 06</span><h3>Trouvable sur Google, Bing et l’IA</h3><p>Un site bien structuré, c’est un site que <b>les moteurs et les assistants IA peuvent lire et recommander</b>.</p><span class="tagx">Exemple illustratif</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉJEAN -->
+<section class="quote" aria-label="Témoignage de Réjean">
+  <div class="wrap">
+    <div class="qvid rv">
+      <video id="qVid" src="assets/rejean-wow.mp4" muted playsinline loop preload="none" aria-label="Réjean : C’est wow. C’est un autre site. On est très satisfait."></video>
+      <button class="snd" id="qSnd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 010 6M19 6a8 8 0 010 12"/></svg><span>Écouter Réjean</span></button>
+      <div class="who"><b>Réjean</b>Propriétaire de la Base Plein Air de la Chaudière</div>
+    </div>
+    <div>
+      <span class="eye">Ce que nos clients disent</span>
+      <p class="bigq" id="bigq" style="margin-top:20px" aria-label="C’est wow. C’est un autre site. On est très satisfait.">
+        <span class="w gw">C’est</span> <span class="w gw">wow.</span><br><span class="w">C’est</span> <span class="w">un</span> <span class="w">autre</span> <span class="w">site.</span><br><span class="w">On</span> <span class="w">est</span> <span class="w">très</span> <span class="w gw">satisfait.</span>
+      </p>
+      <div class="q2 rv"><span class="mk">“</span><div><p>Avant, on était à vieille mode un peu sur le papier, puis on perd des papiers. <b>Puis ça va nous sauver de l’ouvrage, beaucoup.</b></p><small>Réjean, propriétaire · Base Plein Air de la Chaudière, Vallée-Jonction</small></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DÉVELOPPEUR -->
+<section class="dev" aria-label="Bryan, ton développeur">
+  <div class="ph" id="devPh"><img src="assets/bryan.jpg" alt="Bryan, développeur Web chez EMD Média" loading="lazy" onerror="this.parentNode.classList.add('miss')"></div>
+  <div class="wrap">
+    <div class="tx rv">
+      <span class="eye">Ton développeur</span>
+      <p class="bigq">Je fais ton site<br>comme si c’était<br><span class="w gw lit">le mien.</span></p>
+      <div class="name"><b>Bryan</b><span>Développeur Web · EMD Média</span></div>
+      <p class="lead">C’est moi qui construis ton site, de la première maquette à la mise en ligne. <b>Gab s’occupe de toi, moi je m’occupe de ton site.</b> Lessard, la Base, Carl : chacun a eu le même soin.</p>
+      <ul class="pts">
+        <li><span class="n">01</span><div><b>Je comprends ton entreprise avant d’écrire une ligne</b><small>Tes clients, ce qu’ils cherchent, ce qui te fait perdre du temps.</small></div></li>
+        <li><span class="n">02</span><div><b>Je code chaque site sur mesure</b><small>Pas de gabarit recyclé. Ton logo, tes couleurs, tes vraies photos.</small></div></li>
+        <li><span class="n">03</span><div><b>Je ne livre pas tant que ce n’est pas impeccable</b><small>Ordinateur, cellulaire, Google : tout est vérifié avant la mise en ligne.</small></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GAB -->
+<section class="dev rev" aria-label="Gab, service à la clientèle">
+  <div class="ph"><img src="assets/gab.jpg" alt="Gabriel Leblanc, service à la clientèle chez EMD Média" loading="lazy" width="800" height="1200"></div>
+  <div class="wrap">
+    <div class="tx rv">
+      <span class="eye">Service à la clientèle</span>
+      <p class="bigq">Gab<br>s’occupe<br><span class="w gw lit">de toi.</span></p>
+      <div class="name"><b>Gabriel Leblanc</b><span>Service à la clientèle · EMD Média</span></div>
+      <p class="lead">C’est lui qui te rappelle et qui répond à tes questions. <b>Il s’assure que ton site règle ton vrai problème</b>, pas juste qu’il soit beau.</p>
+      <ul class="pts">
+        <li><span class="n">01</span><div><b>Il t’écoute d’abord</b><small>Ton entreprise, tes clients, ce qui te fait perdre du temps.</small></div></li>
+        <li><span class="n">02</span><div><b>Il te montre ce que ton site peut faire</b><small>Avec de vrais exemples, comme Lessard et la Base.</small></div></li>
+        <li><span class="n">03</span><div><b>Il reste ton contact</b><small>Une question? C’est à lui que tu parles.</small></div></li>
+      </ul>
+      <div class="cta-row"><a class="btn btn-p" href="#reserver">Parler à Gab<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- RADIOGRAPHIE -->
+<section id="pourquoi" class="xr" aria-label="Ce que Google voit">
+  <div class="wrap sec-head" style="padding-bottom:36px">
+    <span class="eye">La partie que personne ne voit</span>
+    <h2 class="h2">Ton client voit le design.<br><span class="g">Google lit le code.</span></h2>
+    <p class="lead">Glisse la barre. À gauche, ce que ton client voit. À droite, <b>ce que Google, Bing et les assistants IA lisent</b> pour décider s’ils te montrent. Les deux doivent être impeccables.</p>
+  </div>
+  <div class="wrap">
+    <div class="xr-box" id="xr">
+      <img src="assets/etape-01.webp" alt="Accueil du site Base Plein Air tel que vu par un visiteur" loading="lazy">
+      <div class="xr-code" aria-hidden="true"><div class="scan"></div>
+<pre><span class="c">&lt;!-- Ce que lit Google --&gt;</span>
+<span class="t">&lt;title&gt;</span><span class="s">Base Plein Air de la Chaudière | Kayak, camping et Tiki Bar à Vallée-Jonction</span><span class="t">&lt;/title&gt;</span>
+<span class="t">&lt;meta</span> <span class="a">name</span>=<span class="s">"description"</span> <span class="a">content</span>=<span class="s">"Réserve ton kayak, ton paddleboard ou ton terrain de camping en ligne…"</span><span class="t">&gt;</span>
+<span class="t">&lt;link</span> <span class="a">rel</span>=<span class="s">"alternate"</span> <span class="a">hreflang</span>=<span class="s">"en"</span> <span class="t">…&gt;</span>
+<span class="t">&lt;h1&gt;</span><span class="s">Un passage entre deux mondes</span><span class="t">&lt;/h1&gt;</span>
+<span class="t">&lt;img</span> <span class="a">alt</span>=<span class="s">"Kayaks sur la rivière Chaudière"</span> <span class="a">loading</span>=<span class="s">"lazy"</span><span class="t">&gt;</span>
+
+<span class="t">&lt;script</span> <span class="a">type</span>=<span class="s">"application/ld+json"</span><span class="t">&gt;</span>
+{ <span class="a">"@type"</span>: <span class="s">"LocalBusiness"</span>,
+  <span class="a">"name"</span>: <span class="s">"Base Plein Air de la Chaudière"</span>,
+  <span class="a">"address"</span>: <span class="s">"151, rue du Pont, Vallée-Jonction"</span>,
+  <span class="a">"potentialAction"</span>: <span class="s">"ReserveAction"</span> }
+<span class="t">&lt;/script&gt;</span>
+<span class="c">sitemap.xml · robots.txt · pages rapides · mobile d’abord</span></pre>
+      </div>
+      <span class="xr-lbl l"><span class="lg">Ce que ton client voit</span><span class="sm">Ton client</span></span><span class="xr-lbl r"><span class="lg">Ce que Google lit</span><span class="sm">Google</span></span>
+      <div class="xr-handle" id="xrH" role="slider" tabindex="0" aria-label="Comparer le design et le code" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
+    </div>
+    <p class="xr-note">Illustration simplifiée du type de balisage qu’on intègre à chaque site.</p>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="why" aria-label="Pourquoi chaque détail compte">
+  <div class="wrap">
+    <div class="sec-head" style="padding-top:60px;padding-bottom:0">
+      <span class="eye">Pourquoi tout est important</span>
+      <h2 class="h2">Un beau site<br><span class="g">ne suffit pas.</span></h2>
+      <p class="lead">Un site qui vend, c’est huit choses qui marchent ensemble. Il en manque une, et le client va chez le concurrent. <b>Clique sur chacune.</b></p>
+    </div>
+    <div class="why-grid">
+      <div class="why-list" role="tablist" aria-label="Les éléments d’un site qui vend" id="whyList"></div>
+      <div class="why-panel" role="tabpanel" id="whyPanel" aria-live="polite"><div class="big" id="whyBig">01</div><div class="body" id="whyBody"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRE -->
+<section class="offer" id="offre" aria-label="L’offre Black Friday">
+  <div class="wrap">
+    <div class="ticket rv">
+      <div class="l">
+        <span class="pill">EMD Croissance</span>
+        <div class="was">4 000 $</div>
+        <div class="now">2 000 $</div>
+        <p class="sm">Ton site web pro à <b>-50 %</b>. Prix Black Friday réservé aux 5 premières entreprises.</p>
+        <div class="ok"><span>-50 %</span><span>5 places</span><span>Jusqu’au 30 nov.</span></div>
+      </div>
+      <div class="r">
+        <span class="eye">Ce qui est inclus</span>
+        <ul class="inc">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div>Design sur mesure<small>À ton image, pas un gabarit</small></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div>Réservation, rendez-vous ou soumission<small>Le client fait sa demande en ligne</small></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div>Trouvable sur Google<small>SEO de base intégré dès le départ</small></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div>Rapide sur cellulaire<small>Pensé mobile d’abord</small></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div>Français et anglais</div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div>Conforme à la Loi 25<small>Consentement et politique de confidentialité</small></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div>En ligne en 7 à 14 jours</div></li>
+        </ul>
+        <a class="btn btn-p" href="#reserver">Je prends ma place<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULAIRE -->
+<section class="form-sec" id="reserver" aria-label="Réserver ma place">
+  <div class="wrap">
+    <div>
+      <span class="eye">Réserve ta place</span>
+      <h2 class="h2" style="margin-top:18px">5 places.<br><span class="g">Pas une de plus.</span></h2>
+      <p class="lead" style="margin-top:22px">Laisse tes coordonnées. <b>Gab te rappelle</b> pour comprendre ton entreprise et ce que ton site doit faire.</p>
+      <div class="direct">
+        <a href="tel:+14189557164"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></span><span><small>Appelle-nous</small><b>418 955-7164</b></span><span class="go">→</span></a>
+        <a href="mailto:agence@emdmedia.ca?subject=Black%20Friday%20%E2%80%94%20EMD%20Croissance"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span><span><small>Écris-nous</small><b>agence@emdmedia.ca</b></span><span class="go">→</span></a>
+      </div>
+    </div>
+    <form class="form" id="form" novalidate>
+      <div class="fs">
+        <div class="two">
+          <div class="fld"><label for="f-nom">Prénom et nom</label><input id="f-nom" name="nom" autocomplete="name" required placeholder="Ton nom"></div>
+          <div class="fld"><label for="f-ent">Entreprise</label><input id="f-ent" name="entreprise" autocomplete="organization" required placeholder="Nom de ton entreprise"></div>
+        </div>
+        <div class="two">
+          <div class="fld"><label for="f-tel">Téléphone</label><input id="f-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="418 000-0000"></div>
+          <div class="fld"><label for="f-mail">Courriel</label><input id="f-mail" name="courriel" type="email" autocomplete="email" required placeholder="toi@entreprise.ca"></div>
+        </div>
+        <div class="fld"><span class="lb" id="lb-need">Ton site doit surtout…</span>
+          <div class="chips" role="group" aria-labelledby="lb-need" id="chips">
+            <button type="button" class="chip" aria-pressed="false">Prendre des réservations</button>
+            <button type="button" class="chip" aria-pressed="false">Prendre des rendez-vous</button>
+            <button type="button" class="chip" aria-pressed="false">Recevoir des soumissions</button>
+            <button type="button" class="chip" aria-pressed="false">Je ne sais pas encore</button>
+          </div>
+        </div>
+        <label class="consent"><input type="checkbox" id="f-ok" required><span>J’accepte qu’EMD Média utilise ces renseignements pour me contacter au sujet de cette offre. <a href="politique-confidentialite.html">Politique de confidentialité</a></span></label>
+        <button class="btn btn-p" type="submit" id="fBtn">Réserver ma place<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <p class="err" id="fErr" role="alert"></p>
+      </div>
+      <div class="done" role="status"><h3>Presque fini.</h3><p>Ton application de courriel s’est ouverte avec ta demande prête. <b>Clique sur Envoyer</b> et Gab te rappelle.</p></div>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-label="Questions fréquentes">
+  <div class="wrap">
+    <span class="eye">Questions</span>
+    <h2 class="h2" style="margin-top:18px">Avant de <span class="g">réserver.</span></h2>
+    <div class="list">
+      <details><summary>Qu’est-ce qui arrive après le 30 novembre?<span class="pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans"><p>L’offre se termine. Le site Croissance revient à son prix régulier de 4 000 $.</p></div></details>
+      <details><summary>Combien de temps pour avoir mon site?<span class="pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans"><p>Ton site est en ligne en 7 à 14 jours.</p></div></details>
+      <details><summary>Pourquoi seulement 5 places?<span class="pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans"><p>Chaque site est fait sur mesure. On limite le nombre de places pour livrer chacun au même niveau que Lessard Mécanique ou la Base Plein Air.</p></div></details>
+      <details><summary>C’est quoi la différence avec un site fait soi-même?<span class="pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="ans"><p>Un gabarit te donne une page. On te donne un site pensé pour ton entreprise : design sur mesure, prise de demandes en ligne, structure lisible par Google et l’IA, Loi 25, mobile d’abord. Tout ce qui est expliqué plus haut.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final" aria-label="Dernier appel">
+  <div class="wrap">
+    <span class="eye">Jusqu’au 30 novembre</span>
+    <h2 class="h2" style="margin-top:18px">5 places<br><span class="g">seulement.</span></h2>
+    <p>Ton site Croissance à <b>2 000 $</b> au lieu de 4 000 $.</p>
+    <div class="cta-row"><a class="btn btn-p" href="#reserver">Réserver ma place<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="btn btn-s" href="tel:+14189557164">418 955-7164<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/emd-logo.svg" alt="EMD Média" width="61" height="22">
+    <nav aria-label="Pied de page"><a href="https://emdmedia.ca">emdmedia.ca</a><a href="tel:+14189557164">418 955-7164</a><a href="mailto:agence@emdmedia.ca">agence@emdmedia.ca</a><a href="politique-confidentialite.html">Confidentialité</a></nav>
+    <span>© 2026 EMD Média</span>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><div class="p"><b>2 000 $</b><s>4 000 $</s><small id="mbarCd">5 places · jusqu’au 30 nov.</small></div><a class="btn btn-p btn-sm" href="#reserver">Réserver<span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script>
+(()=>{
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+
+/* Ticker + bandes */
+const T='Black Friday<i>•</i></span><span>-50 % sur ton site web<i>•</i></span><span>Jusqu’au 30 novembre<i>•</i></span><span>5 places seulement<i>•</i>';
+$('#tick').innerHTML=('<span>'+T+'</span>').repeat(6);
+const B1=['Sites qui vendent','Réservation en ligne','Trouvable sur Google','Bing','L’IA','Loi 25','Bilingue'].map(w=>`<span>${w}<i>✦</i></span>`).join('');
+const B2=['Lessard Mécanique','Base Plein Air','Carl Perreault','Ton entreprise?'].map(w=>`<span>${w}<i>/</i></span>`).join('');
+$('#band1').innerHTML=B1.repeat(4);$('#band2').innerHTML=B2.repeat(6);
+
+/* Compte à rebours (heure du Québec) */
+const END=new Date('2026-11-30T23:59:59-05:00').getTime();
+const cdEls={};$$('#cd [data-k]').forEach(e=>cdEls[e.dataset.k]=e);
+const p2=n=>String(n).padStart(2,'0');
+function tickCd(){
+  let ms=END-Date.now();
+  if(ms<=0){$('#cd').innerHTML='<div class="lbl" style="padding:0"><span><b>Offre terminée.</b> Écris-nous pour la suite.</span></div>';$('#miniCd').textContent='Offre terminée';$('#mbarCd').textContent='Offre terminée';return false}
+  const d=Math.floor(ms/864e5),h=Math.floor(ms/36e5)%24,m=Math.floor(ms/6e4)%60,s=Math.floor(ms/1e3)%60;
+  cdEls.d.textContent=p2(d);cdEls.h.textContent=p2(h);cdEls.m.textContent=p2(m);cdEls.s.textContent=p2(s);
+  $('#miniCd').textContent=`${d} j ${p2(h)}:${p2(m)}:${p2(s)}`;
+  $('#mbarCd').textContent=`Fin dans ${d} j ${p2(h)} h ${p2(m)}`;
+  return true;
+}
+if(tickCd()){const iv=setInterval(()=>{if(!tickCd())clearInterval(iv)},1000)}
+
+/* Nav + barre mobile */
+const nav=$('#nav'),mbar=$('#mbar'),form=$('#reserver');
+const pg=$('#pg'),nl=$$('.nav .mid a').map(a=>[a,$(a.getAttribute('href'))]);
+const M={max:1,tops:[],f0:0,f1:0};let ticking=false,mt=0;
+function measure(){const y=scrollY;M.max=Math.max(1,document.documentElement.scrollHeight-innerHeight);M.tops=nl.map(([a,t])=>t?t.getBoundingClientRect().top+y:1e9);const r=form.getBoundingClientRect();M.f0=r.top+y;M.f1=r.bottom+y}
+function applyScroll(){ticking=false;const y=scrollY,h=innerHeight;nav.classList.toggle('on',y>30);
+  pg.style.transform='scaleX('+Math.min(1,y/M.max)+')';
+  let act=null;nl.forEach(([a],i)=>{if(M.tops[i]-y<=h*.4)act=a});nl.forEach(([a])=>a.classList.toggle('act',a===act));
+  mbar.classList.toggle('on',y>h*.8&&!(M.f0-y<h&&M.f1-y>0))}
+function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(applyScroll)}}
+addEventListener('scroll',onScroll,{passive:true});
+const remeasure=()=>{clearTimeout(mt);mt=setTimeout(()=>{measure();applyScroll()},160)};
+addEventListener('resize',remeasure);addEventListener('load',remeasure);if(window.ResizeObserver)new ResizeObserver(remeasure).observe(document.body);
+measure();applyScroll();
+
+/* Son des vidéos */
+function sound(btn,vid,labOn,labOff){
+  btn.addEventListener('click',()=>{
+    const on=vid.muted;
+    $$('video').forEach(v=>{if(v!==vid){v.muted=true}});
+    $$('.snd').forEach(b=>{if(b!==btn){b.setAttribute('aria-pressed','false');b.querySelector('span').textContent=b.dataset.off}});
+    vid.muted=!on;if(on){vid.currentTime=0;vid.play()}
+    btn.setAttribute('aria-pressed',String(on));btn.querySelector('span').textContent=on?labOn:labOff;
+  });btn.dataset.off=labOff;
+}
+const heroVid=$('#heroVid'),qVid=$('#qVid');
+sound($('#heroSnd'),heroVid,'Couper le son','Activer le son');
+setTimeout(()=>{if(heroVid.paused&&heroVid.muted&&heroVid.currentTime<.1){const sp=$('#heroSnd span');sp.textContent='Lire la vidéo';heroVid.addEventListener('playing',()=>{if(heroVid.muted)sp.textContent='Activer le son'},{once:true})}},2500);
+heroVid.addEventListener('click',()=>{if(heroVid.paused)heroVid.play().catch(()=>{})});
+sound($('#qSnd'),qVid,'Couper le son','Écouter Réjean');
+
+/* Vidéos : jouer seulement à l’écran */
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(v.preload==='none')v.preload='auto';if(!v.closest('.scr')||v.classList.contains('on'))v.play().catch(()=>{})}else v.pause()}),{threshold:.25});
+[heroVid,qVid,$('#bScr video')].forEach(v=>vio.observe(v));
+const visIO=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('vis',e.isIntersecting)));$$('.hero,.xr').forEach(e=>visIO.observe(e));
+
+/* Citation : mots qui s’allument avec la vidéo (calage approximatif) */
+const words=$$('#bigq .w'),wt=[.15,.45,1.05,1.3,1.45,1.75,2.25,2.4,2.55,2.75];
+const bq=$('#bigq');let kDone=false;
+qVid.addEventListener('playing',()=>{if(!kDone)bq.classList.add('k')});qVid.addEventListener('pause',()=>bq.classList.remove('k'));
+qVid.addEventListener('timeupdate',()=>{const t=qVid.currentTime;if(!qVid.muted){kDone=false;bq.classList.add('k')}
+  if(kDone)return;words.forEach((w,i)=>w.classList.toggle('lit',t>=wt[i]));
+  if(qVid.muted&&t>3){kDone=true;bq.classList.remove('k');words.forEach(w=>w.classList.remove('lit'))}});
+
+/* Pourquoi : 8 éléments */
+const WHY=[
+ ['Vitesse','Un site lent perd le client avant qu’il voie ton offre.','Sur un cellulaire, en 4G, dans le char : si la page traîne, on revient en arrière et on clique sur le suivant. Google le sait aussi, et favorise les sites rapides.',['Images compressées au bon format','Code léger, sans extensions inutiles','Chargement progressif des vidéos']],
+ ['Mobile d’abord','C’est là que tes clients te cherchent.','Entre deux jobs, le soir sur le divan, au camping. Un site pensé pour l’ordinateur puis « rapetissé » se lit mal et convertit mal. On le recompose pour le pouce.',['Mise en page refaite pour le cellulaire','Boutons assez gros pour le pouce','Appeler ou réserver en un geste']],
+ ['SEO technique','Google ne lit pas ton design. Il lit ta structure.','Titres, descriptions, hiérarchie des pages, textes alternatifs, plan du site : c’est ce qui dit à Google de quoi tu parles et où tu es. Sans ça, même le plus beau site reste invisible.',['Titre et description pour chaque page','Balisage LocalBusiness (données structurées)','Sitemap et robots configurés']],
+ ['Recherche locale','« Près de moi », c’est là que ça se joue.','Quand quelqu’un cherche ton service dans ta région, Google croise ton site et ta fiche d’entreprise. S’ils disent la même chose, tu montes.',['Ville et région dans les bonnes pages','Adresse, téléphone et heures cohérents','Pages par service quand c’est pertinent']],
+ ['Trouvable par l’IA','Tes clients posent maintenant leurs questions à l’IA.','ChatGPT, Gemini, Copilot : ces assistants recommandent les entreprises qu’ils comprennent. Un contenu clair, des réponses aux vraies questions et des données structurées les aident à te lire et à te citer.',['Contenu clair, une page par sujet','Questions fréquentes rédigées','Données structurées lisibles par les machines']],
+ ['Conversion','Un site qui ne prend pas de demandes est une brochure.','Le visiteur est prêt maintenant, pas demain. Réservation, rendez-vous ou soumission en ligne : la demande rentre pendant que tu travailles, et tu sauves des appels.',['Réservation, rendez-vous ou soumission','Bouton principal toujours visible','Demande reçue directement par ton équipe']],
+ ['Loi 25','Au Québec, ce n’est pas optionnel.','Dès que ton site recueille un nom ou un numéro, la Loi 25 s’applique : consentement, politique de confidentialité, responsable désigné. On l’intègre d’office.',['Consentement clair dans les formulaires','Politique de confidentialité','Aucun renseignement recueilli sans raison']],
+ ['Design sur mesure','La première impression décide si on te fait confiance.','En quelques secondes, le visiteur juge si ton entreprise est sérieuse. Un gabarit générique dit « petit budget ». Un site à ton image dit « on est les bons ».',['Vrai logo, vraies couleurs, vraies photos','Animations soignées, jamais gratuites','Français et anglais']]
+];
+const wl=$('#whyList'),wb=$('#whyBody'),wbig=$('#whyBig');
+WHY.forEach((w,i)=>{const b=document.createElement('button');b.type='button';b.className='why-item';b.setAttribute('role','tab');b.id='wt'+i;b.setAttribute('aria-controls','whyPanel');
+  b.innerHTML=`<span class="n">${p2(i+1)}</span><span class="t">${w[0]}</span><span class="pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>`;
+  b.addEventListener('click',()=>selWhy(i));
+  b.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();const j=(i+(e.key==='ArrowDown'?1:WHY.length-1))%WHY.length;selWhy(j);$('#wt'+j).focus()}});
+  wl.appendChild(b)});
+let wcur=-1;const wmq=matchMedia('(max-width:900px)'),wpanel=$('#whyPanel'),wgrid=$('.why-grid');
+function placeWhy(i){if(wmq.matches)$('#wt'+i).after(wpanel);else wgrid.appendChild(wpanel)}
+wmq.addEventListener('change',()=>placeWhy(Math.max(0,wcur)));
+function selWhy(i){if(i===wcur)return;const first=wcur<0,bt=$('#wt'+i),y0=bt.getBoundingClientRect().top;wcur=i;placeWhy(i);
+  if(!first&&wmq.matches){const d=bt.getBoundingClientRect().top-y0;if(d){if(window.__lenis)window.__lenis.scrollTo(scrollY+d,{immediate:true});else scrollBy(0,d)}}
+  $$('.why-item').forEach((b,j)=>{b.setAttribute('aria-selected',String(j===i));b.tabIndex=j===i?0:-1});
+  $('#whyPanel').setAttribute('aria-labelledby','wt'+i);
+  const w=WHY[i];wb.classList.add('swap');
+  setTimeout(()=>{wbig.textContent=p2(i+1);wb.innerHTML=`<span class="k">${p2(i+1)} · ${w[0]}</span><h3>${w[1]}</h3><p class="p">${w[2]}</p><div class="do"><span class="k">Ce qu’on fait</span><ul>${w[3].map(x=>`<li>${x}</li>`).join('')}</ul></div>`;wb.classList.remove('swap')},RM?0:180)}
+selWhy(0);
+
+/* Radiographie */
+const xr=$('#xr'),xh=$('#xrH');let xv=55;
+function setX(v){xv=Math.max(0,Math.min(100,v));xr.style.setProperty('--x',xv+'%');xh.setAttribute('aria-valuenow',Math.round(xv))}
+function fromEv(e){const r=xr.getBoundingClientRect();setX((e.clientX-r.left)/r.width*100)}
+let drag=false;
+xh.addEventListener('pointerdown',e=>{drag=true;xh.setPointerCapture(e.pointerId)});
+xh.addEventListener('pointermove',e=>{if(drag)fromEv(e)});
+xh.addEventListener('pointerup',()=>drag=false);xh.addEventListener('pointercancel',()=>drag=false);
+xr.addEventListener('click',e=>{if(e.target===xr||e.target.tagName==='IMG'||e.target.closest('.xr-code'))fromEv(e)});
+xh.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){setX(xv-5);e.preventDefault()}if(e.key==='ArrowRight'){setX(xv+5);e.preventDefault()}});
+
+/* Formulaire : demande préparée dans le courriel (aucun envoi serveur) */
+$$('#chips .chip').forEach(c=>c.addEventListener('click',()=>c.setAttribute('aria-pressed',String(c.getAttribute('aria-pressed')!=='true'))));
+$('#form').addEventListener('submit',e=>{e.preventDefault();const f=e.target,err=$('#fErr');err.style.display='none';
+  const v=n=>f.elements[n].value.trim();
+  const miss=[];if(!v('nom'))miss.push('ton nom');if(!v('entreprise'))miss.push('ton entreprise');
+  if(v('telephone').replace(/\D/g,'').length<10)miss.push('un téléphone valide');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('courriel')))miss.push('un courriel valide');
+  if(!$('#f-ok').checked)miss.push('ton consentement');
+  if(miss.length){err.textContent='Il manque : '+miss.join(', ')+'.';err.style.display='block';return}
+  const need=$$('#chips .chip[aria-pressed="true"]').map(c=>c.textContent).join(', ')||'Non précisé';
+  const body=`Bonjour EMD,\n\nJe veux réserver ma place pour l’offre Black Friday (EMD Croissance à 2 000 $).\n\nNom : ${v('nom')}\nEntreprise : ${v('entreprise')}\nTéléphone : ${v('telephone')}\nCourriel : ${v('courriel')}\nMon site doit surtout : ${need}\n\nMerci!`;
+  const btn=$('#fBtn');btn.disabled=true;
+  location.href='mailto:agence@emdmedia.ca?subject='+encodeURIComponent('Black Friday — Réserver ma place — '+v('entreprise'))+'&body='+encodeURIComponent(body);
+  setTimeout(()=>{f.classList.add('sent');btn.disabled=false},600);
+});
+
+/* ===== Animations ===== */
+if(RM||!window.gsap){document.documentElement.classList.add('ready');$$('.rv').forEach(e=>{e.style.opacity=1;e.style.transform='none'});$('#volNum').textContent='-50 %';$('#rollPrice').textContent='2 000 $';initLessardStatic();initBase();return}
+gsap.registerPlugin(ScrollTrigger);
+const SAFARI=/^((?!chrome|chromium|android|crios|fxios|edg).)*safari/i.test(navigator.userAgent);let lenis=null;
+if(!SAFARI&&window.Lenis&&matchMedia('(pointer:fine)').matches){lenis=new Lenis({lerp:.1});window.__lenis=lenis;lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0)}
+ScrollTrigger.config({ignoreMobileResize:true});ScrollTrigger.addEventListener('refresh',remeasure);
+$$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=a.getAttribute('href');if(t.length>1&&$(t)){e.preventDefault();if(lenis)lenis.scrollTo(t,{offset:-100});else scrollTo({top:$(t).getBoundingClientRect().top+scrollY-100,behavior:'smooth'})}}));
+
+/* Hero : lettres */
+['.w1','.fr'].forEach(sel=>{const el=$(sel);el.setAttribute('aria-label',el.textContent);el.innerHTML=[...el.textContent].map(c=>`<span class="l" aria-hidden="true"><i class="s">${c}</i><i class="b">${c}</i></span>`).join('')});
+/* particules floues, comme dans la vidéo */
+{const hb=$('.hero-bg');for(let i=0;i<16;i++){const k=document.createElement('i'),sz=10+((i*37+100)%46);k.className='bk';k.style.cssText=`left:${(i*61+7)%100}%;width:${sz}px;height:${sz}px;--c:${i%3?'#fff':'#3CD660'};--o:${(.07+((i*13)%10)/100).toFixed(2)};--d:${16+((i*7)%15)}s;--dl:-${(i*2.3).toFixed(1)}s;--sx:${((i%2?1:-1)*(14+i*2))}px`;hb.appendChild(k)}}
+const MOBH=innerWidth<=980;
+function startHero(){
+const tl=gsap.timeline({defaults:{ease:'expo.out'}});
+const bf=$('#bf'),frW=$('.fr'),fs=parseFloat(getComputedStyle(bf).fontSize);
+// balayage de lumière blanc en ouverture
+const wipe=document.createElement('div');wipe.className='wipe';$('.hero').appendChild(wipe);
+tl.fromTo(wipe,{xPercent:-140,skewX:-22},{xPercent:420,skewX:-22,duration:.75,ease:'power2.inOut',onComplete(){wipe.remove()}},0);
+tl.from('.hero .eye',{y:20,opacity:0,duration:.8},.1).from('.hero .pre',{y:20,opacity:0,duration:.8},.18);
+// lettres : montent, se redressent en 3D, sortent du flou, l'espacement se resserre
+[['.w1',.07],['.fr',.33]].forEach(([sel,at])=>{const L=$$(sel+' .l'),n=L.length,st=.6/n;
+  L.forEach((l,k)=>{const t=at+.3+k*st,sp=(k-(n-1)/2)*fs*.11;
+    tl.fromTo(l,{y:fs*.3,rotateX:-90,x:sp,transformPerspective:700,transformOrigin:'50% 100%'},{y:0,rotateX:0,x:0,duration:.62,ease:'power3.out'},t)
+      .fromTo(l.querySelector('.b'),{opacity:0},{keyframes:[{opacity:.95,duration:.14,ease:'none'},{opacity:0,duration:.5,ease:'power2.in'}]},t)
+      .fromTo(l.querySelector('.s'),{opacity:0},{opacity:1,duration:.4,ease:'power2.out'},t+.2)})});
+tl.fromTo(bf,{scale:.965},{scale:1,duration:3.2,ease:'power1.out',transformOrigin:'0% 60%'},.3);
+// trait de lumière horizontal sur FRIDAY
+const sk=document.createElement('span');sk.className='streak';sk.style.top='50%';frW.appendChild(sk);
+tl.fromTo(sk,{scaleX:0},{scaleX:1,duration:.47,ease:'power2.out'},1.23)
+  .fromTo(sk,{opacity:0},{keyframes:[{opacity:1,duration:.1},{opacity:.7,duration:.43},{opacity:0,duration:.6}],ease:'none',onComplete(){sk.remove()}},1.23);
+// reflet qui balaie FRIDAY
+tl.call(()=>{$$('.fr .b').forEach(e=>e.remove());$$('.w1 .b').forEach(e=>e.remove());
+  const W=frW.offsetWidth;$$('.fr .l').forEach(l=>{const e=l.querySelector('.s');e.style.backgroundImage='linear-gradient(105deg,#3CD660 calc(var(--p) - 13%),#e6ffec var(--p),#3CD660 calc(var(--p) + 13%))';e.style.backgroundSize=W+'px 100%';e.style.backgroundPosition=(-l.offsetLeft)+'px 0'});frW.classList.add('sh')},null,1.56)
+  .fromTo(frW,{'--p':'-20%'},{'--p':'120%',duration:.6,ease:'power2.inOut',onComplete(){frW.classList.remove('sh');$$('.fr .s').forEach(e=>{e.style.backgroundImage=e.style.backgroundSize=e.style.backgroundPosition=''})}},1.57);
+tl.from('.hero .sub,.priceline,.cta-row,.cd',{y:30,opacity:0,stagger:.08,duration:1},1.35)
+  .fromTo('.device',{y:80,opacity:.01,rotateY:MOBH?0:-40,rotateX:MOBH?8:6},{y:0,opacity:1,rotateY:MOBH?0:-14,rotateX:MOBH?8:6,duration:1.6},.5);
+document.documentElement.classList.add('ready');
+const tryPlay=()=>{if(heroVid.paused&&heroVid.currentTime<.1&&heroVid.getBoundingClientRect().bottom>0)heroVid.play().catch(()=>{})};tryPlay();tl.call(tryPlay,null,.7);tl.eventCallback('onComplete',tryPlay);
+let tries=0;const iv=setInterval(()=>{if(!heroVid.paused||++tries>10)return clearInterval(iv);tryPlay()},800);
+['pointerdown','touchstart','keydown'].forEach(ev=>addEventListener(ev,tryPlay,{once:true,passive:true}));
+}
+Promise.race([document.fonts?document.fonts.ready:Promise.resolve(),new Promise(r=>setTimeout(r,900))]).then(startHero);
+gsap.to('.device-wrap',{y:-60,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+if(matchMedia('(hover:hover)').matches){const dv=$('#device');let over=false;
+  dv.addEventListener('pointerenter',()=>{over=true;gsap.killTweensOf(dv,'rotateX,rotateY')});dv.addEventListener('pointerleave',()=>{over=false});
+  $('.hero').addEventListener('pointermove',e=>{if(over||!document.documentElement.classList.contains('ready'))return;const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;gsap.to(dv,{rotateY:-14+x*12,rotateX:6-y*9,duration:1.4,ease:'power3.out',overwrite:'auto'})})}
+
+/* Révélations */
+$$('.rv').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 85%'}}));
+$$('.sec-head').forEach(el=>gsap.from(el.children,{y:50,opacity:0,stagger:.1,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 80%'}}));
+gsap.fromTo('.trust .lg a',{y:20,autoAlpha:0},{y:0,autoAlpha:1,stagger:.12,duration:1,ease:'expo.out',scrollTrigger:{trigger:'.trust',start:'top 95%'}});
+
+/* Bandes diagonales */
+gsap.fromTo('#band1',{xPercent:0},{xPercent:-25,ease:'none',scrollTrigger:{trigger:'.band',start:'top bottom',end:'bottom top',scrub:true}});
+gsap.fromTo('#band2',{xPercent:-25},{xPercent:0,ease:'none',scrollTrigger:{trigger:'.band',start:'top bottom',end:'bottom top',scrub:true}});
+
+/* -50 % en volume */
+const ext=$('#ext');for(let i=1;i<=9;i++){const s=document.createElement('span');s.textContent='-50 %';s.style.transform=`translateZ(${-i*4.4}px)`;s.style.color=`hsl(138,${55-i*2}%,${22-i*1.4}%)`;ext.appendChild(s)}
+const vn=$('#volNum'),ob={v:0},pr={v:4000};ext.querySelectorAll('span').forEach(x=>x.textContent='-0 %');
+vn.textContent='-0 %';vn.dataset.t='-0 %';$('#rollPrice').textContent='4 000 $';
+ScrollTrigger.create({trigger:'.half',start:'top 70%',once:true,onEnter(){
+  gsap.to(ob,{v:50,duration:2.2,ease:'power3.out',onUpdate(){const t=`-${Math.round(ob.v)} %`;vn.textContent=t;vn.dataset.t=t;ext.querySelectorAll('span').forEach(s=>s.textContent=t)},onComplete(){vn.classList.add('shine')}});
+  gsap.to(pr,{v:2000,duration:2.2,delay:.3,ease:'power3.inOut',onUpdate(){const n=Math.round(pr.v/10)*10;$('#rollPrice').textContent=String(n).replace(/\B(?=(\d{3})+$)/,' ')+' $'}});
+}});
+gsap.fromTo(['#volNum','#ext'],{rotateY:-38,rotateX:14},{rotateY:22,rotateX:-6,ease:'none',scrollTrigger:{trigger:'.half',start:'top bottom',end:'bottom top',scrub:true}});
+
+/* Lessard : séquence image par image au défilement */
+const cv=$('#lCanvas'),cx=cv.getContext('2d'),N=63,imgs=[];let last=-1;
+if(innerWidth<=900){cv.width=800;cv.height=1000}
+function draw(i){i=Math.max(0,Math.min(N-1,Math.round(i)));while(i>0&&!imgs[i])i--;const im=imgs[i];if(!im)return;if(i===last)return;
+  const iw=im.naturalWidth||im.width,ih=im.naturalHeight||im.height;if(!iw)return;last=i;
+  const cw=cv.width,ch=cv.height,r=Math.max(cw/iw,ch/ih),w=iw*r,h=ih*r;cx.drawImage(im,(cw-w)/2,(ch-h)/2,w,h)}
+let loaded=false;const seq={f:0};
+/* Images décodées d'avance (ImageBitmap) : le défilement n'attend jamais un décodage */
+function loadSeq(){if(loaded)return;loaded=true;const small=innerWidth<=900;let next=0;
+  const viaImg=u=>new Promise((ok,ko)=>{const im=new Image();im.onload=()=>ok(im);im.onerror=ko;im.src=u});
+  const one=async()=>{while(next<N){const i=next++,u=`assets/lessard/${p2(i+1)}.webp`;let src=null;
+    try{if(window.createImageBitmap){const bl=await(await fetch(u)).blob();
+        try{src=await createImageBitmap(bl,small?{resizeWidth:800,resizeQuality:'high'}:{})}catch(e){src=await createImageBitmap(bl)}}
+      else src=await viaImg(u)}catch(e){try{src=await viaImg(u)}catch(e2){}}
+    if(src){imgs[i]=src;if(Math.round(seq.f)>=i&&(last<0||last<i)){last=-1;draw(seq.f)}}}};
+  for(let k=0;k<4;k++)one()}
+ScrollTrigger.create({trigger:'#lessard',start:'top 250%',once:true,onEnter:loadSeq});
+const ltl=gsap.timeline({scrollTrigger:{trigger:'#lessard',start:'top top',end:'bottom bottom',scrub:.6,onUpdate:s=>gsap.set('#lProg',{scaleX:s.progress})}});
+ltl.fromTo('#lBrowser',{rotateX:28,scale:.82,y:60},{rotateX:0,scale:1,y:0,duration:.18,ease:'power2.out'},0)
+   .to(seq,{f:N-1,duration:.5,ease:'none',onUpdate:()=>draw(seq.f)},0)
+   .to('.cap.c1',{opacity:1,y:0,duration:.06},.08).to('.cap.c1',{opacity:0,y:-20,duration:.06},.3)
+   .to('.cap.c2',{opacity:1,y:0,duration:.06},.32).to('.cap.c2',{opacity:0,y:-20,duration:.06},.56)
+   .to('#lPage',{opacity:1,duration:.08},.5)
+   .fromTo('#lPage img',{yPercent:0},{yPercent:-52,duration:.42,ease:'none'},.56)
+   .to('.cap.c3',{opacity:1,y:0,duration:.06},.62).to('.cap.c3',{opacity:0,y:-20,duration:.06},.94);
+function initLessardStatic(){$('#lPage').style.opacity=1;$$('.cap').forEach(c=>{c.style.opacity=1;c.style.transform='none'})}
+
+/* Base : parcours */
+function initBase(){
+  const shots=$$('#bScr>*'),steps=$$('.step'),url=$('#bUrl'),MOB=innerWidth<=900;let cur=0;
+  function show(i){if(i===cur)return;cur=i;shots.forEach((s,j)=>{s.classList.toggle('on',j===i);if(s.tagName==='VIDEO'){if(j===i){s.preload='auto';s.play().catch(()=>{})}else s.pause()}});steps.forEach((s,j)=>s.classList.toggle('on',j===i));url.textContent=steps[i].dataset.url}
+  steps.forEach((s,i)=>{if(window.ScrollTrigger&&!RM)ScrollTrigger.create({trigger:s,start:MOB?'center 96%':'center 82%',end:MOB?'center 40%':'center 20%',onToggle:e=>{if(e.isActive)show(i)}});else new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)show(i)}),{rootMargin:'-45% 0px -45% 0px'}).observe(s)});
+  if(window.ScrollTrigger&&!RM)gsap.to('#stepFill',{height:'calc(100% - 20px)',ease:'none',scrollTrigger:{trigger:'#steps',start:MOB?'top 70%':'top 50%',end:MOB?'bottom 70%':'bottom 50%',scrub:true}});
+}
+initBase();
+
+/* FAQ fluide */
+$$('.faq details').forEach(d=>{const sm=d.querySelector('summary'),a=d.querySelector('.ans');sm.addEventListener('click',e=>{e.preventDefault();
+  if(d.open){gsap.to(a,{height:0,duration:.45,ease:'power3.inOut',onComplete(){d.open=false;a.style.height=''}})}
+  else{d.open=true;gsap.fromTo(a,{height:0},{height:a.scrollHeight,duration:.55,ease:'power3.out',onComplete(){a.style.height=''}})}})});
+/* Final */
+gsap.from('.final .h2',{scale:.85,opacity:0,duration:1.4,ease:'expo.out',scrollTrigger:{trigger:'.final',start:'top 75%'}});
+addEventListener('load',()=>ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
