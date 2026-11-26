@@ -7,7 +7,7 @@
 <meta name="description" content="Black Friday EMD Média : le site Croissance à 2 500 $ au lieu de 5 000 $. Réservation, rendez-vous ou soumission en ligne, trouvable sur Google, Bing et l’IA. 5 places, jusqu’au 1er décembre.">
 <meta name="theme-color" content="#030603">
 <meta name="robots" content="noindex">
-<!-- v22 -->
+<!-- v23 -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:title" content="Black Friday EMD : ton site web pro à -50 %">
@@ -1178,6 +1178,8 @@ function initLessardStatic(){$('#lPage').style.opacity=1;$$('.cap').forEach(c=>{
 /* Base : parcours */
 function initBase(){
   const shots=$$('#bScr>*'),steps=$$('.step'),url=$('#bUrl'),MOB=innerWidth<=900;let cur=0;
+  /* captures décodées à l'approche de la section : aucun accroc au premier affichage */
+  if(window.IntersectionObserver){const pio=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){pio.disconnect();$$('#bScr img').forEach(im=>{im.loading='eager';const go=()=>im.decode&&im.decode().catch(()=>{});im.complete?go():im.addEventListener('load',go,{once:true})})}},{rootMargin:'150% 0px'});pio.observe($('.base'))}
   function show(i){if(i===cur)return;cur=i;shots.forEach((s,j)=>{s.classList.toggle('on',j===i);if(s.tagName==='VIDEO'){if(j===i){s.preload='auto';s.play().catch(()=>{})}else s.pause()}});steps.forEach((s,j)=>s.classList.toggle('on',j===i));url.textContent=steps[i].dataset.url}
   steps.forEach((s,i)=>{if(window.ScrollTrigger&&!RM)ScrollTrigger.create({trigger:s,start:MOB?'center 96%':'center 82%',end:MOB?'center 40%':'center 20%',onToggle:e=>{if(e.isActive)show(i)}});else new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)show(i)}),{rootMargin:'-45% 0px -45% 0px'}).observe(s)});
   if(window.ScrollTrigger&&!RM)gsap.to('#stepFill',{height:'calc(100% - 20px)',ease:'none',scrollTrigger:{trigger:'#steps',start:MOB?'top 70%':'top 50%',end:MOB?'bottom 70%':'bottom 50%',scrub:true}});
