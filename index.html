@@ -7,7 +7,7 @@
 <meta name="description" content="Black Friday EMD Média : le site Croissance à 2 500 $ au lieu de 5 000 $. Réservation, rendez-vous ou soumission en ligne, trouvable sur Google, Bing et l’IA. 5 places, jusqu’au 1er décembre.">
 <meta name="theme-color" content="#030603">
 <meta name="robots" content="noindex">
-<!-- v21 -->
+<!-- v22 -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:title" content="Black Friday EMD : ton site web pro à -50 %">
@@ -328,6 +328,14 @@ body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opa
   .step{min-height:56vh}
 }
 
+/* Fond d'eau du site de la Base, vivant derrière les panneaux */
+.wsc{overflow:hidden;background:#0a1c2c}
+.wsc::before,.wsc::after{content:"";position:absolute;inset:-12%;background:url(assets/base-eau.webp) center/cover;animation:eau 16s ease-in-out infinite alternate;will-change:transform}
+.wsc::after{opacity:.5;transform:scaleX(-1);animation-name:eau2;animation-duration:21s}
+.wsc:not(.on)::before,.wsc:not(.on)::after{animation-play-state:paused}
+.wsc img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:top}
+@keyframes eau{from{transform:translate3d(-3%,-2%,0) scale(1.02)}to{transform:translate3d(3%,2.5%,0) scale(1.12)}}
+@keyframes eau2{from{transform:scaleX(-1) translate3d(-3%,2%,0) scale(1.1)}to{transform:scaleX(-1) translate3d(3%,-2.5%,0) scale(1)}}
 /* Réjean */
 .quote{position:relative;padding:clamp(90px,11vw,150px) 0;overflow:hidden;background:radial-gradient(ellipse 60% 70% at 25% 50%,rgba(60,214,96,.16),transparent 70%)}
 .quote .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,5vw,80px);align-items:center}
@@ -706,9 +714,9 @@ footer nav{display:flex;gap:22px;flex-wrap:wrap}
         <div class="bar"><i></i><i></i><i></i><span class="url"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 00-5 5v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zm3 8H9V7a3 3 0 016 0z"/></svg><span id="bUrl">pleinairchaudiere.ca</span></span></div>
         <div class="scr" id="bScr">
           <img class="on" src="assets/etape-01.webp" alt="Accueil du site de la Base Plein Air de la Chaudière" loading="lazy">
-          <img src="assets/etape-02.webp" alt="Page Réserver : choix entre embarcation et camping" loading="lazy">
-          <img src="assets/etape-03.webp" alt="Choix de l’embarcation, du jour et de l’heure" loading="lazy">
-          <img src="assets/etape-04.webp" alt="Le client entre son nom et son téléphone et envoie la réservation" loading="lazy">
+          <div class="wsc"><img src="assets/resa-02.webp" alt="Page Réserver : choix entre embarcation et camping, sur le fond d’eau du site" loading="lazy"></div>
+          <div class="wsc"><img src="assets/resa-03.webp" alt="Choix de l’embarcation, du jour et de l’heure, sur le fond d’eau du site" loading="lazy"></div>
+          <div class="wsc"><img src="assets/resa-04.webp" alt="Le client entre son nom et son téléphone et envoie la réservation, sur le fond d’eau du site" loading="lazy"></div>
           <video src="assets/temoignage.mp4" poster="assets/temoignage.webp" muted playsinline loop preload="none" aria-label="Réjean, propriétaire, parle du site"></video>
           <div class="ai" aria-label="Exemple illustratif d’une réponse d’assistant IA">
             <div class="lab"><span>Assistant IA</span><b>Exemple illustratif</b></div>
