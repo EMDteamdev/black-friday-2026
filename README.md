@@ -1,3 +1,3 @@
-# Black Friday 2026 — EMD Média
+# Cyber Monday 2026 — EMD Média
 
-Page de l’offre Black Friday (EMD Croissance). Aperçu : https://emdteamdev.github.io/black-friday-2026/
+Page de l’offre Cyber Monday (EMD Croissance). Aperçu : https://emdteamdev.github.io/black-friday-2026/
