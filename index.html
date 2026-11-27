@@ -280,8 +280,13 @@ body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opa
 .lessard.tb .stick{position:relative;height:auto;overflow:visible;display:block;padding:8px 0 30px}
 .lessard.tb .prog{position:relative;left:auto;bottom:auto;transform:none;margin:74px auto 0}
 .replay{display:none}
-.lessard.tb .replay{display:flex;align-items:center;justify-content:center;gap:10px;min-height:46px;margin:18px auto 0;padding:0 20px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);font-weight:650;font-size:14.5px;color:var(--tx);transition:border-color .25s,background .25s,scale .2s}
-.lessard.tb .replay svg{width:16px;height:16px;color:var(--g)}
+.lessard.lk{height:100svh}
+.lessard.lk .replay{position:absolute;left:50%;bottom:2.2vh;translate:-50% 0;z-index:4;margin:0!important;opacity:0;pointer-events:none}
+.lessard.lk.done .replay{opacity:1;pointer-events:auto}
+.lessard.lk.done .prog{opacity:0}
+.lessard.lk .prog{transition:opacity .4s}
+.lessard.tb .replay,.lessard.lk .replay{display:flex;align-items:center;justify-content:center;gap:10px;min-height:46px;margin:18px auto 0;padding:0 20px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);font-weight:650;font-size:14.5px;color:var(--tx);transition:border-color .25s,background .25s,scale .2s}
+.lessard.tb .replay svg,.lessard.lk .replay svg{width:16px;height:16px;color:var(--g)}
 .lessard.tb .replay:active{scale:.97;border-color:var(--g)}
 .replay:focus-visible{outline:2px solid var(--g);outline-offset:4px}
 .prog i{display:block;height:100%;width:100%;background:var(--g);transform:scaleX(0);transform-origin:left;box-shadow:0 0 12px var(--g)}
@@ -1161,7 +1166,7 @@ function loadSeq(){if(loaded)return;loaded=true;const small=innerWidth<=900;let 
   for(let k=0;k<4;k++)one()}
 ScrollTrigger.create({trigger:'#lessard',start:'top 250%',once:true,onEnter:loadSeq});
 const LTB=$('#lessard').classList.contains('tb');
-const ltl=gsap.timeline(LTB?{paused:true,onUpdate(){gsap.set('#lProg',{scaleX:ltl.progress()})}}:{scrollTrigger:{trigger:'#lessard',start:'top top',end:'bottom bottom',scrub:.6,onUpdate:s=>gsap.set('#lProg',{scaleX:s.progress})}});
+const ltl=gsap.timeline({paused:true,onUpdate(){gsap.set('#lProg',{scaleX:ltl.progress()})}});
 ltl.fromTo('#lBrowser',{rotateX:28,scale:.82,y:60},{rotateX:0,scale:1,y:0,duration:.18,ease:'power2.out'},0)
    .to(seq,{f:N-1,duration:.6,ease:'none',onUpdate:()=>draw(seq.f)},0)
    .to('.cap.c1',{opacity:1,y:0,duration:.06},.08).to('.cap.c1',{opacity:0,y:-20,duration:.06},.3)
@@ -1170,8 +1175,23 @@ ltl.fromTo('#lBrowser',{rotateX:28,scale:.82,y:60},{rotateX:0,scale:1,y:0,durati
    .fromTo('#lCanvas',{yPercent:0},{yPercent:-103,duration:.26,ease:'power2.inOut'},.62)
    .fromTo('#lPage img',{scale:1.07},{scale:1,duration:.3,ease:'power2.out',transformOrigin:'50% 0%'},.62)
    .to('.cap.c3',{opacity:1,y:0,duration:.06},.74).to('.cap.c3',{opacity:0,y:-20,duration:.05},.95);
-if(LTB){ltl.timeScale(.22);const rp=$('#lReplay');
-  ScrollTrigger.create({trigger:'#lessard .stage',start:'center 88%',end:'center 8%',onEnter:()=>ltl.restart(),onEnterBack:()=>ltl.restart(),onLeave:()=>ltl.pause(0),onLeaveBack:()=>ltl.pause(0)});
+/* L'animation joue seule une fois : le défilement s'arrête à l'arrivée, puis reprend quand elle est terminée */
+ltl.timeScale(.22);
+{const LS=$('#lessard'),rp=$('#lReplay'),HT=document.documentElement,COARSE=matchMedia('(pointer:coarse)').matches;
+  let played=false,locked=false,navJump=0,safeT=0;
+  if(!LTB)LS.classList.add('lk');
+  const stopEv=e=>{if(locked&&e.cancelable)e.preventDefault()};
+  const stopKey=e=>{if(locked&&/^(Space|PageDown|PageUp|ArrowDown|ArrowUp|End|Home)$/.test(e.code)&&!/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName))e.preventDefault()};
+  addEventListener('wheel',stopEv,{passive:false});addEventListener('touchmove',stopEv,{passive:false});addEventListener('keydown',stopKey);
+  const unlock=()=>{LS.classList.add('done');if(!locked)return;locked=false;clearTimeout(safeT);HT.style.overflow='';if(window.__lenis)window.__lenis.start()};
+  const lockPlay=()=>{if(played||Date.now()<navJump)return;played=true;locked=true;
+    const r=(LTB?$('#lessard .stage'):LS).getBoundingClientRect(),d=LTB?(r.top<110?r.top-110:0):r.top;
+    if(window.__lenis){window.__lenis.scrollTo(scrollY+d,{immediate:true,force:true});window.__lenis.stop()}else if(d)scrollBy(0,d);
+    if(COARSE)HT.style.overflow='hidden';
+    ltl.restart();safeT=setTimeout(unlock,7000)};
+  ltl.eventCallback('onComplete',unlock);
+  ScrollTrigger.create({trigger:LTB?'#lessard .stage':LS,start:LTB?'center 56%':'top top',onEnter:lockPlay});
+  $$('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{navJump=Date.now()+1800}));
   rp.addEventListener('click',()=>ltl.restart())}
 function initLessardStatic(){$('#lPage').style.opacity=1;$$('.cap').forEach(c=>{c.style.opacity=1;c.style.transform='none'})}
 
